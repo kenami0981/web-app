@@ -39,13 +39,35 @@
     </tr>
     </tbody>
    </table>
-   <img src="https://pbs.twimg.com/profile_images/1516269430086389762/erJa_6Gq_400x400.jpg" alt="aalt text">
-   <img sizes="(min-width: 1200px) 580px,
- (min-width: 640px) 48vw,
- 98vw"
- srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Fiuggi_Vecchia_-_panoramio.jpg/1200px-Fiuggi_Vecchia_-_panoramio.jpg 300w,
- https://pbs.twimg.com/profile_images/1516269430086389762/erJa_6Gq_400x400.jpg 600w,
- https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Fiuggi_Vecchia_-_panoramio.jpg/1200px-Fiuggi_Vecchia_-_panoramio.jpg 900w"
- alt="hello">
+   <img src="img.jpg" alt="aalt text">
+   <picture>
+    <source media="(min-width: 600px)" srcset="img.jpg">
+    <source media="(min-width: 450px)" srcset="img.jpg">
+    <img src="img.jpg" style="width:auto;">
+   </picture>
+   <img src="http://jaced.com/blogpix/2007/trisquarecircle/002.gif" usemap="#shapes">
+<map name="shapes">
+ <area shape="polygon" coords="79,6,5,134,153,134">
+ <area shape="rectangle" coords="177,6,306,134">
+ <area shape="circle" coords="397,71,65">
+</map>
+<fieldset>
+    <legend>Theme color:</legend>
+    <p>
+    <input type="radio" name="color" id="red" value="#F00">
+    <label for="red">Red</label>
+    </p>
+    <p>
+    <input type="radio" name="color" id="green" value="#0F0">
+    <label for="green">Green</label>
+    </p>
+    <p>
+    <input type="radio" name="color" id="blue" value="#00F" >
+    <label for="blue">Blue</label>
+    </p>
+   </fieldset>
+   <input type="file" accept="image/*" title="Only images are allowed">
+
+   
     </body>
 </html>
