@@ -66,7 +66,20 @@
     <label for="blue">Blue</label>
     </p>
    </fieldset>
-   <input type="file" accept="image/*" title="Only images are allowed">
+
+   <h2>Contact Form</h2>
+    <form action="submit.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
 
    
     </body>
