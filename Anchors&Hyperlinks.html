@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Anchors and Hyperlinks</title>
+</head>
+
+<body>
+    <h2>Anchors and Hyperlinks</h2>
+    <ol>
+        <li>Basic use of anchors to another website:</li>
+        <p>&lt;a href="https://google.com">Here is a link to google&lt;a></p>
+        <p><a href="https://google.com">Here is a link to google<a></p><br>
+        <li>Link to a page on the same site</li>
+        <p>&lt;a href="TextFormatting.html">Here is a link to Text Formatting&lt;a></p>
+        <p><a href="TextFormatting.html">Here is a link to Text Formatting<a></p>
+        <li>Link to an anchor on your page</li>
+        <p>&lt;a href="#blank">Here is a link section with blank link&lt;a></p>
+        <p><a href="#blank">Here is a link section with blank link<a></p>
+            <li>Link that dials a number</li>
+        <p>&lt;a href="tel:123456789">Call me!&lt;a></p>
+        <p><a href="tel:123456789">Call me!</a></p>
+
+        <li>Open link in new tab</li>
+        <p>&lt;a id="blank" href="https://goalkicker.com" target="_blank">Link&lt;/a></p>
+        <p><a id="blank" href="https://goalkicker.com" target="_blank">Link with target="_blank</a></p>
+        <p style="max-width: 700px;">Uwaga! Jeśli korzystasz z atrybutu target="_blank" to możesz narazić użytkownika na tak zwany tabnabbing. Dajesz wtedy stronie do której linkujesz dostęp do obiektu "window.opener" w JS.
+            Pozwala to zalinkowanej stronie zmienić zawartość i otworzyć inną stronę na miejscu twojej strony! Ma to miejsce wtedy kiedy zalinkowana strona ma jakiś złośliwy kod (została ona zainfekowana
+            przez hakera), a następnie użytkownik może nabrać się na atak phishingowy (podmieni mu się twoja strona na stronę przypominającą stronę logowania do banku / social mediów).
+            Jeśli korzystasz z _blank to dodaj też atrybut rel="noopener", który zapobiegnie wysyłaniu rządań przez obiekt window.opener. Ponadto obecnie Firefox nie obsługuje noopener więc wykorzystuj
+            rel="noopener noreferrer". 
+        </p>
+        <li>Link that runs email client</li>
+        <p>This will put the email address example@example.com as the recipient for the newly created email.</p>
+        <p>&lt;a href="mailto:example@example.com">Send email&lt;/a></p>
+        <p><a href="mailto:example@example.com">Send email</a></p>
+        <p>Subject and body text
+        You can populate the subject and body for the new email as well:</p>
+        <p>&lt;a href="mailto:example@example.com?subject=Example+subject&body=Message+text">Send email&lt;/a></p>
+        <a href="mailto:example@example.com?subject=Example+subject&body=Message+text">Send email</a><br>
+        <p>Those values must be <a href="https://en.wikipedia.org/wiki/Percent-encoding">URL encoded.</a></p>
+        <!-- <a href="https://goalkicker.com" target="_self">Link</a><br>
+        <a href="https://goalkicker.com" target="_parent">Link</a><br>
+        <a href="https://goalkicker.com" target="_top">Link</a><br> -->
+        
+    </ol>
+</body>
+
+</html>
