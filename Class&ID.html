@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Class and ID</title>
+</head>
+
+<body>
+    <h2>Class and ID</h2>
+    <p>W HTML atrybuty class i id służą do identyfikowania elementów, co ułatwia ich stylowanie za pomocą CSS oraz
+        manipulację przez JavaScript. Choć oba atrybuty mogą wyglądać podobnie, różnią się znaczeniem i sposobem użycia.
+    </p>
+    <ol>
+        <li>Class - do grupowania</li>
+        <p>Atrybut class może być przypisany do wielu elementów i nie musi być unikalny. Umożliwia grupowanie elementów,
+            które mają mieć wspólne style. Aby przypisać klasę, wystarczy użyć atrybutu class w znaczniku HTML:</p>
+<pre>&lt;div class="example-class">&lt;/div></pre>
+        <p>
+            Jeśli chcemy przypisać więcej niż jedną klasę, wystarczy oddzielić je spacją:
+        </p>
+<pre>&lt;div class="class1 class2">&lt;/div></pre>
+        <p>
+            W CSS klasy selekcjonujemy za pomocą kropki:
+        </p>
+        <pre>
+.highlight {
+  color: green;
+}</pre>
+        <p>
+            Ten styl zastosuje się do każdego elementu z klasą highlight, niezależnie od rodzaju znacznika (np. div, span). Jeśli chcemy zawęzić wybór tylko do konkretnych znaczników, możemy podać nazwę elementu i klasę:
+        </p>
+<pre>
+div.highlight {
+  color: green;
+}
+</pre>
+<li>Id - dla unikalnego oznaczenia</li>
+<p>Z kolei atrybut id służy do jednoznacznej identyfikacji konkretnego elementu na stronie. Każdy id powinien być unikalny w obrębie całego dokumentu. Przykład użycia:</p>
+<pre>&lt;div id="example-id">&lt;/div></pre>
+<p>Nie wolno przypisywać tego samego id różnym elementom:</p>
+<pre>
+&lt;div id="duplicate">&lt;/div>
+&lt;span id="duplicate">&lt;/span>  - Błąd! </pre>
+<p>W CSS ID selekcjonujemy za pomocą znaku #:</p>
+<pre>
+#example-id {
+  color: green;
+}
+</pre>
+<p>
+    W JavaScript elementy można pobierać przez id:
+</p>
+<pre>
+document.getElementById("example-id");
+</pre>
+<p>Pamiętaj! Id musi być unikalny, nie może zawierać spacji. musi zaczynać się literą. Jeśli zduplikujemy Id to CSS nadal działa, ale jeśli spróbujemy w JS "var html = document.getElementById("aDiv").innerHTML;" to zwróci tylko pierwszy z nich.
+</p>
+</body>
+
+</html>
