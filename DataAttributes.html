@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Data Attributes</title>
+</head>
+<body>
+    <h1>📘 Notatka: Atrybuty danych (data attributes) w HTML5</h1>
+
+  <p>
+    Atrybuty danych (<code>data-*</code>) to funkcja wprowadzona w HTML5, która umożliwia przechowywanie 
+    niestandardowych informacji w elementach HTML. Są one przydatne szczególnie wtedy, gdy chcemy 
+    dodać do elementów dodatkowe dane, które mogą być wykorzystane np. przez JavaScript.
+  </p>
+<ol>
+<li>Struktura atrybutu danych</li>
+  <p>
+    Każdy atrybut danych zaczyna się od prefiksu <code>data-</code>, a po nim następuje dowolna nazwa:
+  </p>
+
+  <pre>
+&lt;div data-user-id="1234" data-role="admin"&gt;&lt;/div&gt;
+  </pre>
+
+  <p>
+    Można w ten sposób zapisywać także dane w formacie JSON:
+  </p>
+
+  <pre>
+&lt;div data-settings='{"theme":"dark"}'&gt;&lt;/div&gt;
+  </pre>
+
+  <li>Dostęp z poziomu JavaScript</li>
+  <p>Nowoczesne przeglądarki pozwalają korzystać z właściwości <code>dataset</code>:</p>
+
+  <pre>
+const element = document.querySelector('div');
+console.log(element.dataset.userId); // "1234"
+element.dataset.role = "editor"; // zmiana wartości
+  </pre>
+
+  <p>
+    W przypadku starszych przeglądarek można używać metod <code>getAttribute</code> i 
+    <code>setAttribute</code>:
+  </p>
+
+  <pre>
+const id = element.getAttribute('data-user-id');
+element.setAttribute('data-role', 'guest');
+  </pre>
+
+  <li>Wsparcie przeglądarek</li>
+  <p>
+    Chociaż <code>dataset</code> nie działa w bardzo starych przeglądarkach, same atrybuty <code>data-*</code> 
+    są akceptowane. Przeglądarki ignorują nieznane atrybuty, ale ich nie usuwają, więc mogą być 
+    używane z poziomu JavaScript.
+  </p>
+
+  <pre>
+&lt;img src="photo.jpg" value="test" /&gt;
+  </pre>
+
+  <p>
+    Tutaj <code>value</code> nie jest atrybutem dozwolonym w &lt;img&gt;, ale może być odczytany przez JS.
+  </p>
+
+  <li>Podsumowanie</li>
+  <ul>
+    <li>Atrybuty <code>data-*</code> dodają niestandardowe dane do elementów HTML.</li>
+    <li>Dane są przechowywane jako łańcuchy znaków.</li>
+    <li>Dostęp przez <code>dataset</code> w nowych przeglądarkach, lub <code>getAttribute</code>/<code>setAttribute</code> w starszych.</li>
+    <li>Mogą zawierać np. JSON lub inne dane tekstowe.</li>
+    <li>Bezpieczne i zgodne ze standardami HTML5.</li>
+  </ul>
+</ol>
+</body>
+</html>
