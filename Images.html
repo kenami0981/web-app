@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <h1>Images
+    </h1>
+    <ol>
+        <li>Creating an image</li>
+        <p>Aby stworzyć obrazek używamy znacznika <code>&lt;img></code> a następnie określamy lokalizację obrazka przy pomocny aytbuta src</p>
+        <code>&lt;img src="images/img.png" alt="Elmo w ogniu"></code><br>
+        <img src="images/img.jpg" alt="Elmo w ogniu">
+        <p>Albo jeśli chcesz obrazek z adresu URL</p>
+        <code>&lt;img src="https://www.osvnews.com/wp-content/uploads/2024/02/20240213T0700-ELMO-CHALLENGE-OF-LENT-1772599-scaled.jpg" alt="Sesame Street muppet Elmo" width="250"></code><br>
+        <img src="https://www.osvnews.com/wp-content/uploads/2024/02/20240213T0700-ELMO-CHALLENGE-OF-LENT-1772599-scaled.jpg" alt="Sesame Street muppet Elmo" width="250">
+        <li>Choosing alt text</li>
+        <p>Tekst alternatywny alt jest czytany przez czytniki ekranu i widoczny, gdy obrazek się nie załaduje.
+            Dobry alt powinien opisywać funkcję obrazka, a nie jego wygląd.</p>
+    <h5>Zły przykład</h5>
+    <code>
+&lt;img src="anonymous.png" alt="Awatar anonimowego użytkownika"&gt;<br>
+An anonymous user wrote:
+"lorem ipsum"
+    </code>
+
+    <h5>Efekt:</h5>
+    <img src="https://via.placeholder.com/40" alt="Awatar anonimowego użytkownika">
+    An anonymous user wrote:
+    "lorem ipsum"
+
+  <hr>
+
+  <h5>Dobry przykład</h5>
+    <code>
+&lt;img src="anonymous.png" alt=""&gt;<br>
+An anonymous user wrote:
+"lorem ipsum"
+    </code>
+
+    <h5>Efekt:</h5>
+    <img src="https://via.placeholder.com/40" alt="">
+    An anonymous user wrote:
+    "lorem ipsum"
+
+  <hr>
+
+  <h5>Ikony edycji / usuwania</h5>
+    <code>
+&lt;a href="#"&gt;&lt;img src="edit.png" alt="Edytuj"&gt;&lt;/a&gt;<br>
+&lt;a href="#"&gt;&lt;img src="delete.png" alt="Usuń"&gt;&lt;/a&gt;
+    </code>
+
+    <h5>Efekt:</h5>
+    <a href="#"><img class="icon" src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/24/edit-icon.png" alt="Edytuj"></a>
+    <a href="#"><img class="icon" src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/24/delete-icon.png" alt="Usuń"></a>
+
+  <hr>
+
+<li>Responsive image using the srcset attribute</li>
+<pre>
+&lt;picture&gt;
+  &lt;source media=&quot;(min-width:650px)&quot; srcset=&quot;https://www.w3schools.com/tags/img_pink_flowers.jpg&quot;&gt;
+  &lt;source media=&quot;(min-width:465px)&quot; srcset=&quot;https://www.w3schools.com/tags/img_white_flower.jpg&quot;&gt;
+  &lt;img src=&quot;https://www.w3schools.com/tags/img_orange_flowers.jpg&quot; alt=&quot;Flowers&quot;&gt;
+&lt;/picture&gt;
+</pre>
+<picture>
+  <source media="(min-width:650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+  <source media="(min-width:465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
+  <img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers">
+</picture>
+    </ol>
+</body>
+</html>
