@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Input Control Elements</title>
+</head>
+
+<body>
+    <h1>Input Control Elements (&lt;input>)</h1>
+    <p>Element &lt;input> w HTML to kluczowy składnik formularzy służący do zbierania danych od użytkownika. Dzięki
+        atrybutowi type może przyjmować różne formy – od zwykłego pola tekstowego po zaawansowane kontrolki jak wybór
+        koloru, daty czy przesyłanie plików. Każdy typ inputa może mieć szereg atrybutów, które definiują jego
+        zachowanie, walidację oraz wygląd.</p>
+    <ol>
+        <li>Podstawowe atrybuty</li>
+        <ul>
+            <li>type – określa typ pola, np. text, password, email, file itp.</li>
+            <li>name – nazwa pola, przesyłana z danymi formularza.</li>
+            <li>id – unikalny identyfikator, często używany z label.</li>
+            <li>class – przypisuje klasę CSS.</li>
+            <li>value – domyślna wartość pola.</li>
+            <li>placeholder – podpowiedź, co użytkownik powinien wpisać.</li>
+            <li>required – pole obowiązkowe.</li>
+            <li>readonly – tylko do odczytu, nie można edytować.</li>
+            <li>disabled – pole wyłączone.</li>
+            <li>checked – domyślnie zaznaczone (dla radio/checkbox).</li>
+            <li>autocomplete – podpowiedzi przeglądarki (on/off).</li>
+            <li>multiple – pozwala na wiele wartości (dla file/email).</li>
+            <li>step, min, max – ograniczenia liczbowo-czasowe.</li>
+            <li>autofocus – automatyczne skupienie po załadowaniu strony.</li>
+            <li>pattern – walidacja poprzez wyrażenia regularne.</li>
+            <li>accept – określenie typów plików (dla file).</li>
+        </ul>
+        <li>Pole tekstowe (type="text")</li>
+        <p>
+        <pre>
+&lt;label for="name">Imię:&lt/label>
+&lt;input type="text" id="name" name="name" placeholder="Wpisz imię" required>
+</pre>
+        </p>
+        <label for="name">Imię:</label>
+        <input type="text" id="name" name="name" placeholder="Wpisz imię" required>
+        <li>Hasło (type="password")</li>
+        <pre>
+&lt;label for="pass">Hasło:&lt;/label>
+&lt;input type="password" id="pass" name="password" required>
+</pre>
+        <label for="pass">Hasło:</label>
+        <input type="password" id="pass" name="password" required>
+        <li>Adres e-mail (type="email")</li>
+        <pre>
+&lt;label for="email">E-mail:&lt;/label>
+&lt;input type="email" id="email" name="email" placeholder="twoj@email.com" required></pre>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="twoj@email.com" required>
+        <li>Telefon (type="tel")</li>
+        <pre>
+&lt;label for="phone">Telefon:&lt;/label>
+&lt;input type="tel" id="phone" name="phone" pattern="[0-9]{9}" placeholder="123456789">
+</pre>
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" placeholder="123456789">
+        <li>Data (type="date")
+        </li>
+        <pre>
+&lt;label for="dob">Data urodzenia:&lt;/label>
+&lt;input type="date" id="dob" name="dob" min="1900-01-01" max="2025-12-31">
+</pre>
+        <label for="dob">Data urodzenia:</label>
+        <input type="date" id="dob" name="dob" min="1900-01-01" max="2025-12-31">
+        <li>Godzina (type="time")</li>
+        <pre>
+&lt;label for="time">Godzina:&lt;/label>
+&lt;input type="time" id="time" name="meeting_time">
+</pre>
+        <label for="time">Godzina:</label>
+        <input type="time" id="time" name="meeting_time">
+        <li>Zakres liczbowy (type="range")</li>
+        <pre>
+&lt;label for="volume">Głośność:&lt;/label>
+&lt;input type="range" id="volume" name="volume" min="0" max="100" step="5"></pre>
+        <label for="volume">Głośność:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" step="5">
+        <li>Checkbox (type="checkbox") i radio (type="radio")</li>
+        <pre>
+&lt;p>Wybierz kolory:</p>
+&lt;input type="checkbox" id="red" name="color[]" value="red">
+&lt;label for="red">Czerwony&lt;/label>
+
+&lt;input type="checkbox" id="blue" name="color[]" value="blue">
+&lt;label for="blue">Niebieski&lt;/label>
+
+&lt;p>Wybierz płeć:</p>
+&lt;input type="radio" id="male" name="gender" value="male" checked>
+&lt;label for="male">Mężczyzna&lt;/label>
+
+&lt;input type="radio" id="female" name="gender" value="female">
+&lt;label for="female">Kobieta&lt;/label>
+</pre>
+        <p>Wybierz kolory:</p>
+        <input type="checkbox" id="red" name="color[]" value="red">
+        <label for="red">Czerwony</label>
+
+        <input type="checkbox" id="blue" name="color[]" value="blue">
+        <label for="blue">Niebieski</label>
+
+        <p>Wybierz płeć:</p>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Mężczyzna</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Kobieta</label>
+        <li>Przesyłanie plików (type="file")</li>
+        <pre>
+&lt;form action="upload.php" method="post" enctype="multipart/form-data">
+  &lt;label for="upload">Wybierz plik:</label>
+  &lt;input type="file" id="upload" name="fileUpload" accept=".jpg,.png,.pdf" multiple>
+  &lt;input type="submit" value="Wyślij">
+&lt;/form>
+</pre>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="upload">Wybierz plik:</label>
+            <input type="file" id="upload" name="fileUpload" accept=".jpg,.png,.pdf" multiple>
+            <input type="submit" value="Wyślij">
+        </form>
+        <li>Kolor (type="color")</li>
+        <pre>
+&lt;label for="favcolor">Ulubiony kolor:&lt;/label>
+&lt;input type="color" id="favcolor" name="favcolor" value="#ff0000">
+</pre>
+        <label for="favcolor">Ulubiony kolor:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+        <li>Adres URL (type="url")</li>
+        <pre>
+&lt;label for="website">Strona internetowa:&lt;/label>
+&lt;input type="url" id="website" name="website" placeholder="https://example.com">
+</pre>
+        <label for="website">Strona internetowa:</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+        <li>Ukryte pole (type="hidden")</li>
+        <pre>
+&lt;input type="hidden" name="userId" value="48291">
+</pre>
+        <input type="hidden" name="userId" value="48291">
+        <li>Przycisk (type="button")</li>
+        <pre>
+&lt;input type="button" value="Kliknij mnie" onclick="alert('Kliknięto!')">
+</pre>
+        <input type="button" value="Kliknij mnie" onclick="alert('Kliknięto!')">
+        <li>Przycisk wysyłania (type="submit")</li>
+        <pre>
+&lt;form>
+  &lt;input type="text" name="username" required>
+  &lt;input type="submit" value="Wyślij">
+&lt;/form>
+</pre>
+        <form>
+            <input type="text" name="username" required>
+            <input type="submit" value="Wyślij">
+        </form>
+        <li>Przycisk resetujący (type="reset")</li>
+        <pre>
+&lt;form>
+  &lt;input type="text" name="username">
+  &lt;input type="reset" value="Wyczyść formularz">
+&lt;/form>
+</pre>
+        <form>
+            <input type="text" name="username">
+            <input type="reset" value="Wyczyść formularz">
+        </form>
+        <li>Wyszukiwanie (type="search")</li>
+        <pre>
+&lt;input type="search" name="query" placeholder="Szukaj...">
+</pre>
+        <input type="search" name="query" placeholder="Szukaj...">
+        <li>Data i czas lokalny (type="datetime-local")</li>
+        <pre>
+&lt;label for="meeting">Spotkanie:</label>
+&lt;input type="datetime-local" id="meeting" name="meeting">
+</pre>
+        <label for="meeting">Spotkanie:</label>
+        <input type="datetime-local" id="meeting" name="meeting">
+        <li>Tydzień i miesiąc (type="week" i type="month")</li>
+        <pre>
+&lt;label for="week">Wybierz tydzień:&lt;/label>
+&lt;input type="week" id="week" name="week">
+
+&lt;label for="month">Wybierz miesiąc:&lt;/label>
+&lt;input type="month" id="month" name="month">
+</pre>
+        <li>Walidacja formularzy (HTML5)</li>
+        <p>
+            HTML5 pozwala na automatyczną walidację danych bez użycia JavaScript:
+        </p>
+        <ul>
+            <li>required – pole obowiązkowe.</li>
+            <li>pattern – dopasowanie do wyrażenia regularnego:<br>
+                &lt;input type="text" pattern="[A-Za-z]{3,}" title="Wpisz co najmniej 3 litery.">
+            </li>
+            <li>min, max, step – zakresy liczbowe:<br>
+                &lt;input type="number" min="1" max="10" step="1">
+            </li>
+            <li>minlength, maxlength – ograniczenie długości tekstu:<br>
+                &lt;input type="text" minlength="3" maxlength="10">
+            </li>
+            <li>
+                Aby wyłączyć walidację dla przycisku:<br>
+                &lt;input type="submit" formnovalidate>
+            </li>
+
+        </ul>
+
+    </ol>
+
+
+</body>
+
+</html>
