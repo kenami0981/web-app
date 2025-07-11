@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Div Element</title>
+    <style>
+        div {
+ display: block;
+}
+
+    </style>
+</head>
+<body>
+   <h2>Div Element</h2>
+   <p>The div element in HTML is a container element that encapsulates other elements and can be used to group and
+separate parts of a webpage. A div by itself does not inherently represent anything but is a powerful tool in web
+design. This topic covers the purpose and applications of the div element.</p> 
+<ol>
+    <li>Basic usage</li>
+    <p>The <div> element usually has no specific semantic meaning by itself, simply representing a division, and is typically
+used for grouping and encapsulating other elements within an HTML document and separating those from other
+groups of content. As such, each <div> is best described by its contents.</p>
+    <pre>
+&lt;div>
+    &lt;p>Hello! This is a paragraph.&lt;/p>
+&lt;/div>
+    </pre>
+<div>
+ <p>Hello! This is a paragraph.</p>
+</div>
+    <p>
+The div element is typically a block-level element, meaning that it separates a block of an HTML document and
+occupying the maximum width of the page. Browsers typically have the following default CSS rule:
+    </p>
+    <pre>
+div {
+    display: block;
+}
+    </pre>
+    <li>Nesting
+    </li>
+    <p>It is a common practice to place multiple &lt;div> inside another &lt;div>. This is usually referred to as "nesting"
+elements and allows for further dividing elements into subsections or aid developers with CSS styling.
+The &lt;div class="outer-div"> is used to group together two &lt;div class="inner-div"> elements; each containing
+a &lt;p> element.</p>
+<pre>
+&lt;div class="outer-div">
+    &lt;div class="inner-div">
+        &lt;p>This is a paragraph&lt;/p>
+    &lt;/div>
+    &lt;div class="inner-div">
+        &lt;p>This is another paragraph&lt;/p>
+    &lt;/div>
+&lt;/div>
+    
+</pre>
+<p>Avoid deep &lt;div> nesting
+A deep and oftenly used nested container layouts shows a bad coding style.
+Rounded corners or some similar functions often create such an HTML code. For most of the last generation
+browsers there are CSS3 counterparts. Try to use as little as possible HTML elements to increase the content to tag
+ratio and reduce page load, resulting in a better ranking in search engines.
+div section Element should be not nested deeper than 6 layers.</p>
+</ol>
+</body>
+</html>
