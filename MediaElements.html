@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Media Elements</title>
+</head>
+
+<body>
+    <h2>Media Elements</h2>
+    <ol>
+        <li>Audio</li>
+        <p>Aby dodać element audio korzystasz z znacznika &lt;audio></p>
+        <pre>
+&lt;audio controls>
+    &lt;source src="media/Silent_Sirenade.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+&lt;/audio>
+<audio controls>
+    <source src="media/Silent_Sirenade.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+</pre>
+        <li>Video</li>
+        <p>Aby dodać element videp korzystasz z znacznika &lt;video></p>
+<pre>
+&lt;video width="500" height="700" controls>
+    &lt;source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+&lt;/video>
+</pre>
+        <video width="700" height="400" controls>
+            <source src="media/fire.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <li>Video header or background</li>
+        <p>Wideo które będzie zapętlone, idealne do tła lub nagłówka</p>
+        <pre>
+&lt;video width="700" height="400" autoplay muted loop poster="video.jpg" id="videobg">
+    &lt;source src="media/fire.mp4" type="video/mp4">
+&lt;/video>
+        </pre>
+        <video width="700" height="400" autoplay muted loop poster="video.jpg" id="videobg">
+            <source src="media/fire.mp4" type="video/mp4">
+        </video>
+    </ol>
+</body>
+
+</html>
