@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Selection Menu Controls</title>
+</head>
+<body>
+    <h2>Notatka: Selection Menu Controls</h2>
+
+<ol>
+    <li>
+        <p><b>Select Menu</b></p>
+        <p>Element <code>&lt;select&gt;</code> tworzy menu rozwijane.</p>
+        <p>Przykład:</p>
+        <pre>
+&lt;select name="">
+    &lt;option value="1">One&lt;/option>
+    &lt;option value="3">Three&lt;/option>
+    &lt;option value="2">Two&lt;/option>
+    &lt;option value="4">Four&lt;/option>
+&lt;/select>
+        </pre>
+        <p>
+            <select name="">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+            </select>
+        </p>
+        <p>Atrybut <code>size</code> określa ilość widocznych opcji. Wartość &gt;1 zamienia rozwijane menu w okno z paskiem przewijania.</p>
+        <p><code>multiple</code> pozwala wybrać więcej niż jedną opcję. Domyślnie powoduje wyświetlenie listy w formie okna.</p>
+    </li>
+
+    <li>
+        <p><b>Options</b></p>
+        <p>Elementy <code>&lt;option&gt;</code> określają dostępne wybory. Przykład:</p>
+        <p><code>&lt;option value="option1"&gt;Some Option&lt;/option&gt;</code></p>
+        <p>Atrybuty:</p>
+        <ol>
+            <li><code>value</code> - wartość przesyłana do serwera</li>
+            <li><code>label</code> - tekst widoczny w rozwijanym menu</li>
+            <li><code>selected</code> - domyślnie wybrana opcja</li>
+        </ol>
+        <p>Jeśli więcej niż jedna opcja ma <code>selected</code>, zostanie wybrana ostatnia z nich (w menu jednokrotnego wyboru). W przypadku <code>multiple</code>, wszystkie z <code>selected</code> będą zaznaczone.</p>
+    </li>
+
+    <li>
+        <p><b>Option Groups</b></p>
+        <p><code>&lt;optgroup&gt;</code> pozwala grupować opcje w <code>&lt;select&gt;</code>. Przykład:</p>
+        <pre>
+&lt;select name="">
+    &lt;option value="milk">Milk</option>
+    &lt;optgroup label="Fruits">
+        &lt;option value="banana">Bananas</option>
+        &lt;option value="strawberry">Strawberries</option>
+    &lt;/optgroup>
+    &lt;optgroup label="Vegetables" disabled>
+        &lt;option value="carrot">Carrots</option>
+        &lt;option value="zucchini">Zucchini</option>
+    &lt;/optgroup>
+&lt;/select>
+        </pre>
+        <p>
+            <select name="">
+                <option value="milk">Milk</option>
+                <optgroup label="Fruits">
+                    <option value="banana">Bananas</option>
+                    <option value="strawberry">Strawberries</option>
+                </optgroup>
+                <optgroup label="Vegetables" disabled>
+                    <option value="carrot">Carrots</option>
+                    <option value="zucchini">Zucchini</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>Grupa z atrybutem <code>disabled</code> uniemożliwia wybór wszystkich jej opcji.</p>
+    </li>
+
+    <li>
+        <p><b>Datalist</b></p>
+        <p><code>&lt;datalist&gt;</code> służy do autouzupełniania danych w <code>&lt;input&gt;</code>. Przykład:</p>
+        <pre>
+&lt;input list="Languages">
+&lt;datalist id="Languages">
+    &lt;option value="PHP">
+    &lt;option value="Perl">
+    &lt;option value="Python">
+    &lt;option value="Ruby">
+    &lt;option value="C+">
+&lt;/datalist>
+        </pre>
+        <p>
+            <input list="Languages">
+            <datalist id="Languages">
+                <option value="PHP">
+                <option value="Perl">
+                <option value="Python">
+                <option value="Ruby">
+                <option value="C+">
+            </datalist>
+        </p>
+        <p>Użytkownik widzi listę dostępnych propozycji podczas wpisywania danych.</p>
+    </li>
+</ol>
+
+</body>
+</html>
