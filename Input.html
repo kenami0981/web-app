@@ -9,28 +9,28 @@
 <body>
     <h1>Input Control Elements (&lt;input>)</h1>
     <p>Element &lt;input> w HTML to kluczowy składnik formularzy służący do zbierania danych od użytkownika. Dzięki
-        atrybutowi type może przyjmować różne formy – od zwykłego pola tekstowego po zaawansowane kontrolki jak wybór
+        atrybutowi type może przyjmować różne formy - od zwykłego pola tekstowego po zaawansowane kontrolki jak wybór
         koloru, daty czy przesyłanie plików. Każdy typ inputa może mieć szereg atrybutów, które definiują jego
         zachowanie, walidację oraz wygląd.</p>
     <ol>
         <li>Podstawowe atrybuty</li>
         <ul>
-            <li>type – określa typ pola, np. text, password, email, file itp.</li>
-            <li>name – nazwa pola, przesyłana z danymi formularza.</li>
-            <li>id – unikalny identyfikator, często używany z label.</li>
-            <li>class – przypisuje klasę CSS.</li>
-            <li>value – domyślna wartość pola.</li>
-            <li>placeholder – podpowiedź, co użytkownik powinien wpisać.</li>
-            <li>required – pole obowiązkowe.</li>
-            <li>readonly – tylko do odczytu, nie można edytować.</li>
-            <li>disabled – pole wyłączone.</li>
-            <li>checked – domyślnie zaznaczone (dla radio/checkbox).</li>
-            <li>autocomplete – podpowiedzi przeglądarki (on/off).</li>
-            <li>multiple – pozwala na wiele wartości (dla file/email).</li>
-            <li>step, min, max – ograniczenia liczbowo-czasowe.</li>
-            <li>autofocus – automatyczne skupienie po załadowaniu strony.</li>
-            <li>pattern – walidacja poprzez wyrażenia regularne.</li>
-            <li>accept – określenie typów plików (dla file).</li>
+            <li>type - określa typ pola, np. text, password, email, file itp.</li>
+            <li>name - nazwa pola, przesyłana z danymi formularza.</li>
+            <li>id - unikalny identyfikator, często używany z label.</li>
+            <li>class - przypisuje klasę CSS.</li>
+            <li>value - domyślna wartość pola.</li>
+            <li>placeholder - podpowiedź, co użytkownik powinien wpisać.</li>
+            <li>required - pole obowiązkowe.</li>
+            <li>readonly - tylko do odczytu, nie można edytować.</li>
+            <li>disabled - pole wyłączone.</li>
+            <li>checked - domyślnie zaznaczone (dla radio/checkbox).</li>
+            <li>autocomplete - podpowiedzi przeglądarki (on/off).</li>
+            <li>multiple - pozwala na wiele wartości (dla file/email).</li>
+            <li>step, min, max - ograniczenia liczbowo-czasowe.</li>
+            <li>autofocus - automatyczne skupienie po załadowaniu strony.</li>
+            <li>pattern - walidacja poprzez wyrażenia regularne.</li>
+            <li>accept - określenie typów plików (dla file).</li>
         </ul>
         <li>Pole tekstowe (type="text")</li>
         <p>
@@ -195,14 +195,14 @@
             HTML5 pozwala na automatyczną walidację danych bez użycia JavaScript:
         </p>
         <ul>
-            <li>required – pole obowiązkowe.</li>
-            <li>pattern – dopasowanie do wyrażenia regularnego:<br>
+            <li>required - pole obowiązkowe.</li>
+            <li>pattern - dopasowanie do wyrażenia regularnego:<br>
                 &lt;input type="text" pattern="[A-Za-z]{3,}" title="Wpisz co najmniej 3 litery.">
             </li>
-            <li>min, max, step – zakresy liczbowe:<br>
+            <li>min, max, step - zakresy liczbowe:<br>
                 &lt;input type="number" min="1" max="10" step="1">
             </li>
-            <li>minlength, maxlength – ograniczenie długości tekstu:<br>
+            <li>minlength, maxlength - ograniczenie długości tekstu:<br>
                 &lt;input type="text" minlength="3" maxlength="10">
             </li>
             <li>

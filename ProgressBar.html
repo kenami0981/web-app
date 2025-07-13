@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Progress Bar</title>
+</head>
+<body>
+    <h2>Progress Bar</h2>
+    <ol>
+        <li>Progress</li>
+        <p>Znacznik &lt;progress> jest wykorzystywany aby pokwazać postęp wykonywanego zadania</p>
+        <pre>&lt;progress value="22" max="100">&lt;/progress></pre>
+        <progress value="22" max="100"></progress>
+        <li>Stylowanie progress bar</li>
+        <p>Element &lt;progress&gt; pozwala wyświetlić pasek postępu. Można go stylować za pomocą selektora <b>progress[value]</b>.</p>
+
+<p><b>Podstawowy styl paska postępu:</b></p>
+<pre>
+progress[value] {
+    width: 250px;
+    height: 20px;
+}
+</pre>
+
+<p><b>Stylowanie w przeglądarkach:</b></p>
+
+<ul>
+    <li><b>Chrome, Safari, Opera</b>
+        <p>Wymagane jest wyłączenie domyślnego stylu:</p>
+        <pre>
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: green;
+}
+        </pre>
+    </li>
+
+    <li><b>Firefox</b>
+        <p>Firefox stosuje dodatkowe style, np. ramkę - trzeba ją usunąć:</p>
+        <pre>
+progress[value] {
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+        </pre>
+    </li>
+
+    <li><b>Internet Explorer 10+</b>
+        <p>Nie obsługuje <code>background-color</code>. Użyj <code>color</code>:</p>
+        <pre>
+progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 250px;
+    height: 20px;
+    color: blue;
+}
+        </pre>
+    </li>
+</ul>
+
+<li>Fallback HTML - dla starszych przeglądarek:</li>
+
+<p>Jeśli przeglądarka nie obsługuje elementu &lt;progress&gt;, można użyć fallbacku wewnątrz niego:</p>
+<pre>
+&lt;progress max="100" value="20"&gt;
+    &lt;div class="progress-bar"&gt;
+        &lt;span style="width: 20%;"&gt;Progress: 20%&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/progress&gt;
+</pre>
+<progress max="100" value="20">
+    <div class="progress-bar">
+        <span style="width: 20%;">Progress: 20%</span>
+    </div>
+</progress>
+
+<p>Nowoczesne przeglądarki zignorują &lt;div&gt;, ale starsze (które nie rozpoznają &lt;progress&gt;) pokażą &lt;div&gt; jako alternatywę.</p>
+    </ol>
+</body>
+</html>
