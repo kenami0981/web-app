@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Output Element</title>
+</head>
+
+<body>
+    <h2>Output Element</h2>
+    <p>Element &lt;output> w HTML służy do wyświetlania wyników obliczeń lub operacji (np. sumy dwóch liczb, wyników
+        formularza itp.). Jest przydatny, gdy chcesz pokazać dynamiczne wyniki na stronie bez potrzeby odświeżania jej.
+        Przyład:</p>
+    <pre>
+&lt;form id="form1" id="form1" oninput="out1.value = parseInt(in1.value,10) + parseInt(in2.value,10)">
+    &lt;fieldset>
+        &lt;legend>Dodawanie&lt;/legend>
+        &lt;input name="in1" id="in1" type="number" value="0">&lt;br>
+        &lt;input name="in2" id="in2" type="number" value="0">
+    &lt;/fieldset>
+    &lt;output form="form1" name="out1" for="in1 in2">0&lt;/output>
+&lt;/form>
+</pre>
+<p><b>Efekt:</b></p>
+    <form id="form1" id="form1" oninput="out1.value = parseInt(in1.value,10) + parseInt(in2.value,10)">
+        <fieldset>
+            <legend>Dodawanie</legend>
+            <input name="in1" id="in1" type="number" value="0"><br>
+            <input name="in2" id="in2" type="number" value="0">
+        </fieldset>
+        <output form="form1" name="out1" for="in1 in2">0</output>
+    </form><br>
+    <table border="1">
+        <thead>
+            <td>Atrybut</td>
+            <td>Opis</td>
+        </thead>
+        <tr>
+            <td>name</td>
+            <td>Nazwa outputu (jak w &lt;input>). Pozwala odnieść się do elementu np. w JavaScript lub przy wysyłce
+                formularza.</td>
+        </tr>
+        <tr>
+            <td>for</td>
+            <td>Lista ID elementów formularza (np. input, select), których wartości będą wpływać na ten output.</td>
+        </tr>
+        <tr>
+            <td>form</td>
+            <td>ID formularza, z którym <output> ma być powiązany (jeśli nie znajduje się bezpośrednio w tym
+                    formularzu).</td>
+        </tr>
+    </table>
+    <h3>Dodatek</h3>
+    <p><b>Chapter 24: Void Elements – Notatka</b></p>
+
+    <p>Void elements to specjalna grupa znaczników HTML, które nie zawierają żadnej treści i dlatego nie wymagają
+        znacznika zamykającego. Używa się ich wyłącznie z otwierającym tagiem, np. &lt;br&gt;.</p>
+
+    <p><b>Cechy void elements:</b></p>
+    <ol>
+        <li>Nie zawierają treści ani elementów wewnętrznych.</li>
+        <li>Nie wymagają znacznika zamykającego.</li>
+        <li>W HTML5 nie trzeba dodawać ukośnika (/) – ale jest to tolerowane.</li>
+    </ol>
+
+    <p><b>Przykłady void elements:</b></p>
+
+    <table border="1" cellpadding="6">
+        <tr>
+            <td><b>Znacznik</b></td>
+            <td><b>Opis</b></td>
+        </tr>
+        <tr>
+            <td>&lt;br&gt;</td>
+            <td>Łamanie linii</td>
+        </tr>
+        <tr>
+            <td>&lt;img&gt;</td>
+            <td>Obrazek</td>
+        </tr>
+        <tr>
+            <td>&lt;input&gt;</td>
+            <td>Pole formularza</td>
+        </tr>
+        <tr>
+            <td>&lt;hr&gt;</td>
+            <td>Pozioma linia</td>
+        </tr>
+        <tr>
+            <td>&lt;meta&gt;</td>
+            <td>Metadane dokumentu</td>
+        </tr>
+        <tr>
+            <td>&lt;link&gt;</td>
+            <td>Dołączanie CSS lub innych zasobów</td>
+        </tr>
+        <tr>
+            <td>&lt;area&gt;</td>
+            <td>Klikalny obszar w mapie obrazka</td>
+        </tr>
+        <tr>
+            <td>&lt;base&gt;</td>
+            <td>Bazowy URL dla linków</td>
+        </tr>
+        <tr>
+            <td>&lt;source&gt;</td>
+            <td>Źródło dla video/audio</td>
+        </tr>
+        <tr>
+            <td>&lt;param&gt;</td>
+            <td>Parametry dla osadzanych treści</td>
+        </tr>
+    </table>
+
+    <p><b>Poprawne użycie:</b></p>
+    <pre>
+&lt;img src="logo.png" alt="Logo"&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;input type="text" placeholder="Wpisz swoje imię"&gt;
+</pre>
+
+    <p><b>Niepoprawne użycie:</b></p>
+    <pre>
+&lt;/br&gt;       ← Błąd
+&lt;img&gt;&lt;/img&gt; ← Błąd
+</pre>
+
+    <p><b>Dodatkowe uwagi:</b></p>
+    <ol>
+        <li>W XHTML używa się &lt;br /&gt;, &lt;img /&gt; – to wymóg składni XML.</li>
+        <li>W HTML5 zaleca się pisać po prostu &lt;br&gt; bez zamykania ukośnikiem.</li>
+    </ol>
+
+</body>
+
+</html>
