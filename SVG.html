@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Chapter 31: SVG</title>
+    <style>
+        .attention {
+            fill: red;
+            width: 50px;
+            height: 50px;
+        }
+
+        .sparkle {
+            fill: gold;
+            stroke: black;
+            stroke-width: 2;
+            width: 50px;
+            height: 50px;
+        }
+
+        .sparkle:hover {
+            fill: orange;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>SVG</h2>
+
+    <ol>
+        <li>
+            <p><b>Definicja SVG</b></p>
+            <p>SVG (Scalable Vector Graphics) to skalowalne grafiki wektorowe oparte na XML, używane do tworzenia
+                grafiki w przeglądarce.</p>
+            <p>Element <code>&lt;svg&gt;</code> jest kontenerem dla grafiki SVG - może zawierać kształty, tekst, linie,
+                ścieżki i inne elementy graficzne.</p>
+        </li>
+
+        <li>
+            <p><b>Inline SVG</b></p>
+            <p>SVG może być zapisany bezpośrednio w dokumencie HTML. Przykład:</p>
+            <pre>
+&lt;svg class="attention" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000" >
+    &lt;path id="attention" 
+d="m571,767l0,-106q0,-8,-5,-13t-12,-5l-108,0q-7,0,-12,5t-5,13l0,106q0,8,5,13t12,6l108,0q7,0,12,-6t5
+,-13Zm-1,-208l10,-257q0,-6,-5,-10q-7,-6,-14,-6l-122,0q-7,0,-14,6q-5,4,-5,12l9,255q0,5,6,9t13,3l103,
+0q8,0,13,-3t6,-9Zm-7,-522l428,786q20,35,-1,70q-10,17,-26,26t-35,10l-858,0q-18,0,-35,-10t-26,-26q-21
+,-35,-1,-70l429,-786q9,-17,26,-27t36,-10t36,10t27,27Z" />
+&lt;/svg>
+
+&lt;/svg&gt;
+      </pre>
+            <p>
+                <svg class="attention" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 1000 1000">
+                    <path id="attention" d="m571,767l0,-106q0,-8,-5,-13t-12,-5l-108,0q-7,0,-12,5t-5,13l0,106q0,8,5,13t12,6l108,0q7,0,12,-6t5
+,-13Zm-1,-208l10,-257q0,-6,-5,-10q-7,-6,-14,-6l-122,0q-7,0,-14,6q-5,4,-5,12l9,255q0,5,6,9t13,3l103,
+0q8,0,13,-3t6,-9Zm-7,-522l428,786q20,35,-1,70q-10,17,-26,26t-35,10l-858,0q-18,0,-35,-10t-26,-26q-21
+,-35,-1,-70l429,-786q9,-17,26,-27t36,-10t36,10t27,27Z" />
+                </svg>
+
+            </p>
+            <p>Można go stylować CSS-em:</p>
+            <pre>
+.attention {
+ fill: red;
+ width: 50px;
+ height: 50px;
+}
+      </pre>
+        </li>
+
+        <li>
+            <p><b>Osadzanie zewnętrznego pliku SVG</b></p>
+            <p><code>&lt;img&gt;</code> lub <code>&lt;object&gt;</code> mogą ładować zewnętrzne pliki SVG.</p>
+            <p><code>&lt;img src="attention.svg"&gt;</code> - nie umożliwia stylowania ani manipulacji JS.</p>
+            <p><code>&lt;object type="image/svg+xml" data="attention.svg"&gt;</code> - umożliwia stylowanie i
+                interakcje.</p>
+        </li>
+
+        <li>
+            <p><b>Dlaczego warto korzystać z SVG (zamiast &lt;img&gt;)?</b></p>
+            <ul>
+                <li><b>Skalowalność</b> - nie traci jakości w żadnej rozdzielczości (Retina, druk, zoom).</li>
+                <li><b>Stylowanie CSS-em</b> - można zmieniać kolor, rozmiar, dodać hover itp.</li>
+                <li><b>Mały rozmiar</b> - idealne dla ikon i UI (czysty kod XML zamiast dużych bitmap).</li>
+                <li><b>Dostępność</b> - SVG można oznaczać ARIA/alt, co poprawia dostępność.</li>
+                <li><b>Animacje</b> - wspiera animacje CSS oraz SMIL/JS.</li>
+                <li><b>Manipulacja JS</b> - można dynamicznie zmieniać SVG w locie (np. kolor, położenie).</li>
+            </ul>
+            <p><b>W skrócie:</b> SVG = lepsze ikony, grafiki, interaktywne elementy UI. <code>&lt;img&gt;</code> to
+                tylko obraz.</p>
+        </li>
+
+        <li>
+            <p><b>Potencjał SVG - przykładowa grafika</b></p>
+            <pre>
+&lt;svg viewBox="0 0 100 100" class="sparkle"&gt;
+  &lt;polygon points="50,10 60,40 90,40 65,60 75,90 50,70 25,90 35,60 10,40 40,40" /&gt;
+&lt;/svg&gt;
+
+.sparkle {
+    fill: gold;
+    stroke: black;
+    stroke-width: 2;
+    width: 50px;
+    height: 50px;
+}
+.sparkle:hover {
+    fill: orange;
+} 
+      </pre>
+            <p>
+                <svg viewBox="0 0 100 100" class="sparkle">
+                    <polygon points="50,10 60,40 90,40 65,60 75,90 50,70 25,90 35,60 10,40 40,40" />
+                </svg>
+            </p>
+            <p>Ten element zmienia kolor po najechaniu - dzięki temu idealnie nadaje się np. do interfejsu użytkownika.
+            </p>
+        </li>
+
+        <li>
+            <p><b>Podsumowanie</b></p>
+            <ul>
+                <li>SVG daje więcej możliwości niż <code>&lt;img&gt;</code>.</li>
+                <li>Warto go znać do projektowania UI, ikon, animacji i dynamicznych grafik.</li>
+                <li>SVG może być interaktywny, responsywny i dostępny.</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+
+</html>
