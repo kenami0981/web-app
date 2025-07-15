@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Canvas</title>
+<style>
+    #canvas1{
+ border:1px solid gray;
+ }
+</style>
+</head>
+<body>
+    <h2>Canvas</h2>
+    <ol>
+        <li>Basic Example
+            
+        </li>
+        <pre>
+&lt;canvas id="myCanvas">
+    An alternative text describing what your canvas displays.
+&lt;/canvas>
+        </pre>
+        <p>JavaScript</p>
+        <pre>
+var ctx = document.getElementById("myCanvas").getContext("2d");
+// now we can refer to the canvas's 2D layer context using `ctx`
+
+ctx.fillStyle = "#f00";
+ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height); // x, y, width, height
+
+ctx.fillStyle = "#000";
+ctx.fillText("My red canvas with some black text", 70, 50);            
+        </pre>
+        <canvas id="myCanvas">
+  An alternative text describing what your canvas displays.
+</canvas>
+
+
+
+<li>Drawing two rectangles on a &lt;canvas></li>
+<p>HTML</p>
+<pre>&lt;canvas id="canvas1" width=300 height=200>Your browser does not support canvas.&lt;/canvas></pre>
+<p>CSS</p>
+<pre>
+#canvas1{
+    border:1px solid gray;
+}
+</pre>
+<p>JavaScript</p>
+<pre>
+ window.onload = init; // call init() once the window is completely loaded
+ function init(){
+ // #1 - get reference to &lt;canvas> element
+ var canvas = document.getElementById("canvas1");
+
+ // #2 - get reference to the drawing context and drawing API
+ var ctx = canvas.getContext('2d');
+ // #3 - all fill operations are now in red
+ ctx.fillStyle = 'red';
+ // #4 - fill a 100x100 rectangle at x=0,y=0
+ ctx.fillRect(0,0,100,100);
+
+ // #5 - all fill operations are now in green
+ ctx.fillStyle = 'green';
+
+ // #6 - fill a 50x50 rectangle at x=25,y=25
+ ctx.fillRect(25,25,50,50);
+
+ }
+</pre>
+<canvas id="canvas1" width=300 height=200>Your browser does not support canvas.</canvas>
+    </ol>
+        <script>
+var ctx = document.getElementById("myCanvas").getContext("2d");
+// now we can refer to the canvas's 2D layer context using `ctx`
+
+ctx.fillStyle = "#f00";
+ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height); // x, y, width, height
+
+ctx.fillStyle = "#000";
+ctx.fillText("My red canvas with some black text", 70, 50);
+
+
+
+
+
+
+
+window.onload = init; // call init() once the window is completely loaded
+ function init(){
+ // #1 - get reference to <canvas> element
+ var canvas = document.getElementById("canvas1");
+
+ // #2 - get reference to the drawing context and drawing API
+ var ctx = canvas.getContext('2d');
+ // #3 - all fill operations are now in red
+ ctx.fillStyle = 'red';
+ // #4 - fill a 100x100 rectangle at x=0,y=0
+ ctx.fillRect(0,0,100,100);
+
+ // #5 - all fill operations are now in green
+ ctx.fillStyle = 'green';
+
+ // #6 - fill a 50x50 rectangle at x=25,y=25
+ ctx.fillRect(25,25,50,50);
+
+ }
+    </script>
+</body>
+</html>
