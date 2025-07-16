@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Meta Information</title>
+    <meta name="application-name" content="web-app">
+    <meta name="authot" content="Kenami">
+    <meta name="description" content="Meta Information">
+</head>
+
+<body>
+    <h2>Meta Information</h2>
+    <ol>
+        <li>Page Information</li>
+        <ul>
+            <li><b>application-name</b></li>
+            <p>&lt;meta name="application-name" content="Your App Name"></p>
+
+            <li><b>author</b></li>
+            <p>&lt;meta name="author" content="Your Name"></p>
+
+            <li><b>description</b></li>
+            <p>&lt;meta name="description" content="Page Description"></p>
+            <p>The description meta tag can be used by various search engines while indexing your web page for searching
+                purpose. Usually, the description contained within the meta tag is the short summary that shows up under
+                the
+                page/website's main title in the search engine results. Google usually uses only the first 20-25 words
+                of your
+                description.</p>
+
+            <li><b>generator</b></li>
+            <p>&lt;meta name="generator" content="HTML Generator 1.42"></p>
+            <p>Identifies one of the software packages used to generate the document. Only to be used for pages where
+                the
+                markup is automatically generated.</p>
+
+            <li><b>keywords</b></li>
+            <p>&lt;meta name="keywords" content="Keyword1, Keyword2"></p>
+            <p>The keywords meta tag is sometimes used by search engines to know the search query which is relevant to
+                your web page.
+                As a rule of thumb, it is probably a good idea to not add too many words, as most search engines that
+                use this meta
+                tag for indexing will only index the first ~20 words. Make sure that you put the most important keywords
+                first.</p>
+            <li><b>robots</b></li>
+            <p>&lt;meta name="robots" content="noindex"></p>
+            <p>The <code>robots</code> meta tag tells search engines what they are allowed (or not allowed) to do with a
+                web page. You can control whether search engines should index the page or follow the links on it. Below
+                are common values:</p>
+            <ul>
+                <li><b>all</b> - Default; equivalent to <code>index, follow</code></li>
+                <li><b>noindex</b> - Prevent indexing of the page</li>
+                <li><b>nofollow</b> - Prevent search engines from following any links on the page</li>
+                <li><b>none</b> - Equivalent to <code>noindex, nofollow</code></li>
+                <li><b>noarchive</b> - Don't allow cached versions in search results</li>
+                <li><b>nosnippet</b> - Don't show a snippet in search results</li>
+                <li><b>notranslate</b> - Don't allow translation options in search</li>
+                <li><b>noimageindex</b> - Prevent indexing of images on the page</li>
+                <li><b>unavailable_after</b> - Remove the page from search after a specific RFC 850 date/time</li>
+            </ul>
+            <p>Note: Explicitly specifying <code>index</code> and <code>follow</code> is not required, as these are
+                assumed by default if not overridden.</p>
+
+        </ul>
+        <li>Character Encoding</li>
+        <p>The charset attribute specifies the character encoding for the HTML document and needs to be a valid
+            character encoding (examples include windows-1252, ISO-8859-2, Shift_JIS, and UTF-8). UTF-8 (Unicode) is the
+            most widely
+            used and should be used for any new project.</p>
+        <pre>
+&lt;meta charset="UTF-8">
+&lt;meta charset="ISO-8859-1">
+</pre>
+        <p>All browsers have always recognized the &lt;meta charset> form, but if you for some reason need your page to
+            be
+            valid HTML 4.01, you can use the following instead:</p>
+        <pre>
+&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8">
+&lt;meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+</pre>
+        <li>Social Media</li>
+        <p>Meta tagi, takie jak <code>og:title</code> czy <code>twitter:card</code>, służą do przekazywania informacji
+            o stronie serwisom społecznościowym. Nie są one widoczne dla użytkownika odwiedzającego stronę,
+            ale są odczytywane przez Facebooka, Twittera, LinkedIna i inne platformy.</p>
+        <p>Dzięki nim, po wklejeniu linku do strony w poście, automatycznie pojawia się tytuł, opis i miniatura —
+            co przyciąga uwagę i zachęca do kliknięcia.</p>
+        <p>Przykłady</p>
+        <pre>
+        Open Graph (Facebook, LinkedIn itp.)
+&lt;meta property="og:title" content="Tytuł treści">
+&lt;meta property="og:description" content="Opis strony, który pojawi się przy udostępnianiu linku.">
+&lt;meta property="og:image" content="https://example.com/obrazek.jpg">
+&lt;meta property="og:url" content="https://example.com/podstrona">
+&lt;meta property="og:type" content="website">
+&lt;meta property="og:site_name" content="Nazwa strony">
+
+        Twitter
+&lt;meta name="twitter:card" content="summary_large_image">
+&lt;meta name="twitter:title" content="Tytuł treści na Twitterze">
+&lt;meta name="twitter:description" content="Krótki opis widoczny pod linkiem.">
+&lt;meta name="twitter:image" content="https://example.com/twitter-image.jpg">
+    </pre>
+        <p>
+        <pre>Na urządzeniach mobilnych (szczególnie z systemem iOS i przeglądarką Safari), numer telefonu wpisany jako zwykły tekst, np.:
+&lt;p>Skontaktuj się z nami: 123 456 789&lt;/p>
+automatycznie zostaje rozpoznany jako numer telefonu i zamieniony na klikalny link typu tel:, czyli np.:
+&lt;a href="tel:123456789">123 456 789&lt;/a>
+Dzięki temu użytkownik może w jedno kliknięcie zadzwonić.</pre>
+        </p>
+        <p>Czasami algorytmy mylą się i:</p>
+        <ul>
+            <li>potraktują ISBN, numer zamówienia lub numer referencyjny jako numer telefonu,</li>
+            <li>co prowadzi do niepotrzebnych linków,</li>
+            <li>a to może wyglądać nieprofesjonalnie lub wprowadzać w błąd.</li>
+        </ul>
+        <p>Aby uniemożliwić przeglądarce rozpoznawanie numerów jako tel:, dodajesz w &lt;head>:</p>
+        <pre>
+&lt;meta name="format-detection" content="telephone=no">
+</pre>
+        <li>Automatic Refresh</li>
+        <p>To refresh the page every five seconds, add this meta element in the head element:</p>
+        <p>&lt;meta http-equiv="refresh" content="5"></p>
+        <p>CAUTION! While this is a valid command, it is recommended that you do not use it because of its negative
+            effects
+            on user experience. Refreshing the page too often can cause it to become unresponsive, and often scrolls to
+            the
+            top of the page. If some information on the page needs to be updated continuously, there are much better
+            ways to
+            do that by only refreshing a portion of a page.</p>
+        <li>Automatic redirect</li>
+        <p>Sometimes your webpage needs a automatic redirect. For example, to redirect to example.com after 5 seconds:
+        </p>
+        <pre>
+&lt;meta http-equiv="refresh" content="5;url=https://www.example.com/" />
+
+        </pre>
+        <p>This is line will send you to the designated website (in this case example.com) after 5 seconds.
+            If you need to change the time delay before a redirect, simply changing the number right before your ;url=
+            will
+            alter the time delay.</p>
+        <li>Web App</li>
+        <p>You can set up your web app or website to have an application shortcut icon added to a device's homescreen, and
+have the app launch in full-screen "app mode" using Chrome for Android's "Add to homescreen" menu item.
+Below meta tag(s) will open web app in full-screen mode (without address bar).</p>
+<p><b>Android Chrome</b><br>&lt;meta name="mobile-web-app-capable" content="yes"></p>
+<p><b>IOS</b><br>&lt;meta name="apple-mobile-web-app-capable" content="yes"></p>
+<p>You can also set color for status bar and address bar in meta tag.</p>
+<p><b>Android Chrome</b><br>&lt;meta name="theme-color" content="black"></p>
+<p><b>IOS</b><br>&lt;meta name="apple-mobile-web-app-status-bar-style" content="black"></p>
+    </ol>
+</body>
+
+</html>
