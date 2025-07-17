@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Global Attributes</title>
+</head>
+<body>
+    <h2>Global Attributes</h2>
+    <ol>
+    <li>Globalne atrybuty</li>
+    <ul>
+      <li><b>class</b></li>
+      <p>Określa jedną lub więcej nazw klas dla elementu.</p>
+      <p>&lt;element class="nazwa-klasy"></p>
+
+      <li><b>id</b></li>
+      <p>Unikalny identyfikator dla elementu.</p>
+      <p>&lt;element id="unikalny-id"></p>
+
+      <li><b>contenteditable</b></li>
+      <p>Umożliwia edytowanie treści danego elementu jak w polu tekstowym.</p>
+      <p>Przykład:</p>
+<pre>
+&lt;p contenteditable&gt;To jest edytowalny paragraf.&lt;/p&gt;
+</pre>
+<p contenteditable>To jest edytowalny paragraf.</p>
+      <p>Jeśli chcesz, aby część tekstu była nieedytowalna:</p>
+<pre>
+&lt;p contenteditable&gt;
+  Edytowalne &lt;span contenteditable="false"&gt;ale to już nie&lt;/span&gt;
+&lt;/p&gt;
+</pre>
+
+
+      <li><b>dir</b></li>
+      <p>Określa kierunek tekstu (np. rtl dla języków pisanych od prawej do lewej).</p>
+      <p>&lt;element dir="rtl"&gt;</p>
+      <input type="text" dir="rtl">
+
+      <li><b>draggable</b></li>
+      <p>Określa, czy element może być przeciągany (true lub false).</p>
+      <p>&lt;div draggable="true"&gt;Przeciągnij mnie&lt;/div&gt;</p>
+      <div draggable="true">Przeciągnij mnie</div>
+
+      <li><b>hidden</b></li>
+      <p>Ukrywa element - nie jest widoczny na stronie.</p>
+
+      <li><b>lang</b></li>
+      <p>Ustawia język treści wewnątrz elementu.</p>
+      <p>&lt;p lang="en"&gt;Hello&lt;/p&gt;</p>
+
+      <li><b>spellcheck</b></li>
+      <p>Określa, czy treść elementu ma być sprawdzana pod kątem błędów.</p>
+      <p>&lt;textarea spellcheck="true"&gt;</p>
+      <textarea spellcheck="true" lang="pl"></textarea>
+
+      <li><b>style</b></li>
+      <p>Inline CSS - styl bezpośrednio przypisany do elementu.</p>
+      <p>&lt;div style="color:red"&gt;Czerwony tekst&lt;/div&gt;</p>
+
+      <li><b>tabindex</b></li>
+      <p>Określa kolejność elementów w nawigacji klawiszem Tab.</p>
+      <p>&lt;div tabindex="0"&gt;Element w kolejności&lt;/div&gt;</p>
+
+      <li><b>title</b></li>
+      <p>Dodatkowy opis pojawiający się jako podpowiedź po najechaniu myszką.</p>
+      <p>&lt;span title="Wskazówka"&gt;Najedź tu&lt;/span&gt;</p>
+      <span title="Wskazówka">Najedź tu</span>
+
+      <li><b>translate</b></li>
+      <p>Określa, czy zawartość elementu powinna być tłumaczona przez przeglądarkę.</p>
+      <p>&lt;div translate="no"&gt;Nazwa marki&lt;/div&gt;</p>
+    </ul>
+  </ol>
+</body>
+</html>
