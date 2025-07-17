@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Character Entities</title>
+</head>
+<body>
+    <h2>Character Entities</h2>
+    <ol>
+    <li>Character Entities w HTML</li>
+    <ul>
+      <li><b>Opis</b></li>
+      <p>W HTML niektóre znaki mają specjalne znaczenie (np. &lt;, &gt;, &amp;) lub nie występują bezpośrednio na klawiaturze. Aby ich użyć, nie naruszając struktury kodu, stosujemy tzw. <b>encje znaków</b>.</p>
+      <p>Encje można zapisać na dwa sposoby:</p>
+      <ul>
+        <li>Za pomocą <b>nazwy encji</b>: <code>&amp;nazwa;</code></li>
+        <li>Za pomocą <b>numeru encji</b>: <code>&amp;#numer;</code></li>
+      </ul>
+      <p>Przykład użycia ikony lupy w polu wyszukiwania:</p>
+<pre>
+&lt;input type="text" placeholder=" &amp;#128269; Search"/&gt;
+</pre>
+<input type="text" placeholder=" &#128269; Search"/>
+
+      <li><b>Najczęściej używane encje</b></li>
+      <table border="1" cellpadding="6">
+        <thead>
+          <tr>
+            <th>Charakter</th>
+            <th>Opis</th>
+            <th>Nazwa encji</th>
+            <th>Numer encji</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&nbsp;</td>
+            <td>spacja niełamliwa</td>
+            <td>&amp;nbsp;</td>
+            <td>&amp;#160;</td>
+          </tr>
+          <tr>
+            <td>&lt;</td>
+            <td>mniejsze niż</td>
+            <td>&amp;lt;</td>
+            <td>&amp;#60;</td>
+          </tr>
+          <tr>
+            <td>&gt;</td>
+            <td>większe niż</td>
+            <td>&amp;gt;</td>
+            <td>&amp;#62;</td>
+          </tr>
+          <tr>
+            <td>&amp;</td>
+            <td>ampersand</td>
+            <td>&amp;amp;</td>
+            <td>&amp;#38;</td>
+          </tr>
+          <tr>
+            <td>&mdash;</td>
+            <td>pauza (em dash)</td>
+            <td>&amp;mdash;</td>
+            <td>&amp;#8212;</td>
+          </tr>
+          <tr>
+            <td>&ndash;</td>
+            <td>półpauza (en dash)</td>
+            <td>&amp;ndash;</td>
+            <td>&amp;#8211;</td>
+          </tr>
+          <tr>
+            <td>&copy;</td>
+            <td>copyright</td>
+            <td>&amp;copy;</td>
+            <td>&amp;#169;</td>
+          </tr>
+          <tr>
+            <td>&reg;</td>
+            <td>registered trademark</td>
+            <td>&amp;reg;</td>
+            <td>&amp;#174;</td>
+          </tr>
+          <tr>
+            <td>&trade;</td>
+            <td>trademark</td>
+            <td>&amp;trade;</td>
+            <td>&amp;#8482;</td>
+          </tr>
+          <tr>
+            <td>&phone;</td>
+            <td>telefon</td>
+            <td>&amp;phone;</td>
+            <td>&amp;#9742;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <li><b>Przykład użycia w praktyce</b></li>
+      <p>Aby wyświetlić zapis:</p>
+      <p><b>© 2016 Stack Exchange Inc.</b></p>
+      <p>Używamy następującego kodu:</p>
+<pre>
+&lt;b&gt;&amp;copy; 2016 Stack Exchange Inc.&lt;/b&gt;
+</pre>
+    </ul>
+  </ol>
+</body>
+</html>
