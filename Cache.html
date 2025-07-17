@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cache</title>
+</head>
+<body>
+    <h2>HTML5 Cache</h2>
+    <ol>
+    <li>Cache w HTML5 (Application Cache)</li>
+    <ul>
+      <li><b>Podstawowy przykład</b></li>
+      <p>W pliku HTML należy dodać atrybut <b>manifest</b> do tagu &lt;html&gt;:</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html manifest="index.appcache"&gt;
+  &lt;body&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      <p>Następnie tworzysz plik <b>index.appcache</b> w tym samym folderze z treścią:</p>
+<pre>
+CACHE MANIFEST
+index.html
+</pre>
+      <p>Po wczytaniu strony przeglądarka zapisuje pliki wymienione w manifest w cache i można ją przeglądać offline.</p>
+
+      <li><b>Ważne informacje</b></li>
+      <p>Application Cache zostało <b>przestarzałe (deprecated)</b> i nie jest już zalecane do użycia w nowych projektach.</p>
+      <p>Nowoczesnym podejściem do cache'owania offline są <b>Service Workers</b> i <b>Cache API</b>.</p>
+      <p>Application Cache było wygodne, ale miało wiele wad, m.in. trudną kontrolę nad aktualizacjami i problemy z bezpieczeństwem.</p>
+
+      <li><b>Uwagi</b></li>
+      <p>Oba pliki (HTML i .appcache) muszą znajdować się w tym samym folderze.</p>
+      <p>Po zmianie zawartości appcache konieczne jest odświeżenie cache przez przeglądarkę.</p>
+      <p>Strona musi być serwowana z odpowiednim nagłówkiem MIME: <code>text/cache-manifest</code>.</p>
+    </ul>
+  </ol>
+    
+</body>
+</html>
