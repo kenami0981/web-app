@@ -1,48 +1,179 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <title>Kurs HTML</title>
-        
-    </head>
-    <body>
-        <h1>Witaj na mojej stronie</h1>
-        <p>Oto strona gdzie powtarzam sobie HTML</p>
-        <nav>
-            <ul>
-                <li><a href="TextFormatting.html">HTML Paragraphs and Text Formatting</a></li>
-                <li><a href="Anchors&Hyperlinks.html">Anchors and Hyperlinks</a></li>
-                <li><a href="Lists&Tables.html">List and Tables</a></li>
-                <li><a href="Class&ID.html">Class and ID</a></li>
-                <li><a href="DataAttributes.html">Data Attributes</a></li>
-                <li><a href="LinkingResources.html">Linking Resources</a></li>
-                <li><a href="Images.html">Images</a></li>
-                <li><a href="Input.html">Input Control Elements</a></li>
-                <li><a href="Forms.html">Forms</a></li>
-                <li><a href="DIvElement.html">Div Element</a></li>
-                <li><a href="SectioningElements.html">Sectioning Elements</a></li>
-                <li><a href="OutputElement.html">Output Element</a></li>
-                <li><a href="MediaElements.html">Media Elements</a></li>
-                <li><a href="ProgressBar.html">Progress Bar</a></li>
-                <li><a href="Selection.html">Selection Menu Controls</a></li>
-                <li><a href="Embed.html">Embed</a></li>
-                <li><a href="Iframes.html">Iframes</a></li>
-                <li><a href="ContentLanguages.html">Content Languages</a></li>
-                <li><a href="SVG.html">SVG</a></li>
-                <li><a href="Canvas.html">Canvas</a></li>
-                <li><a href="MetaInformation.html">Meta Information</a></li>
-                <li><a href="ComputerCode.html">Marking up computer code</a></li>
-                <li><a href="Tabindex.html">Tabindex</a></li>
-                <li><a href="GlobalAttributes.html">Global Attributes</a></li>
-                <li><a href="Cache.html">Cache</a></li>
-                <li><a href="CharacterEntities.html">Character Entities</a></li>
-                <li><a href="ARIA.html">ARIA</a></li>
-            </ul>
-            
-        </nav>
-        
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kurs HTML</title>
+  <style>
+    body {
+      background-color: rgba(155, 178, 255, 1);
+      background-image: linear-gradient(0deg, rgba(155, 178, 255, 1) 0%, rgba(163, 195, 255, 1) 25%, rgba(255, 253, 127, 1) 75%, rgba(255, 253, 127, 1) 100%);
+      background-repeat: no-repeat;
+    }
+
+    .cloud-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .cloud {
+      background-image: url("images/Cloud.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      /* dopasuj obrazek do rozmiaru chmurki */
+      background-position: center;
+      /* wycentruj */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 200px;
+      /* dodaj rozmiary */
+      height: 120px;
+      padding: 3rem 1.5rem;
+      /*box-shadow: 0 2px 6px rgba(0,0,0,0.1);*/
+      white-space: nowrap;
+      text-decoration: none;
+      color: #333;
+      
+      font-size: 1rem;
+    }
 
 
-   
-    </body>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      background-image: url("images/Cloud.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      /* dopasuj obrazek do rozmiaru chmurki */
+      background-position: center;
+      /* wycentruj */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      /* dodaj rozmiary */
+      height: 120px;
+      padding: 3rem 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .dropbtn {
+
+      background-color: transparent;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      margin-top: 9rem;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      z-index: 1;
+
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropbtn:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Witaj na mojej stronie</h1>
+  <p>Oto strona gdzie powtarzam sobie HTML</p>
+  <div class="cloud-wrapper">
+
+    <div class="dropdown cloud">
+      <button class="dropbtn">Text & Formatting</button>
+      <div class="dropdown-content">
+        <a href="TextFormatting.html">HTML Paragraphs and Text Formatting</a>
+        <a href="Lists&Tables.html">List and Tables</a>
+        <a href="ComputerCode.html">Marking up computer code</a>
+        <a href="CharacterEntities.html">Character Entities</a>
+      </div>
+    </div>
+    <div class="dropdown cloud">
+      <button class="dropbtn">Multimedia & Graphics</button>
+      <div class="dropdown-content">
+        <a href="Images.html">Images</a>
+        <a href="MediaElements.html">Media Elements</a>
+        <a href="Embed.html">Embed</a>
+        <a href="Iframes.html">Iframes</a>
+        <a href="SVG.html">SVG</a>
+        <a href="Canvas.html">Canvas</a>
+        <a href="ProgressBar.html">Progress Bar</a>
+      </div>
+    </div>
+    <div class="dropdown cloud">
+      <button class="dropbtn">Structure & Layout</button>
+      <div class="dropdown-content">
+        <a href="Class&ID.html">Class and ID</a>
+        <a href="DIvElement.html">Div Element</a>
+        <a href="SectioningElements.html">Sectioning Elements</a>
+        <a href="Selection.html">Selection Menu Controls</a>
+        <a href="DataAttributes.html">Data Attributes</a>
+      </div>
+    </div>
+    <div class="dropdown cloud">
+      <button class="dropbtn">Links & Metadata</button>
+      <div class="dropdown-content">
+        <a href="Anchors&Hyperlinks.html">Anchors and Hyperlinks</a>
+        <a href="LinkingResources.html">Linking Resources</a>
+        <a href="MetaInformation.html">Meta Information</a>
+        <a href="ContentLanguages.html">Content Languages</a>
+      </div>
+    </div>
+    <div class="dropdown cloud">
+      <button class="dropbtn">Forms & Input</button>
+      <div class="dropdown-content">
+        <a href="Input.html">Input Control Elements</a>
+        <a href="Forms.html">Forms</a>
+        <a href="OutputElement.html">Output Element</a>
+      </div>
+    </div>
+    <div class="dropdown cloud">
+      <button class="dropbtn">Advanced</button>
+      <div class="dropdown-content">
+        <a href="Tabindex.html">Tabindex</a>
+        <a href="GlobalAttributes.html">Global Attributes</a>
+        <a href="Cache.html">Cache</a>
+        <a href="ARIA.html">ARIA</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    const clouds = document.querySelectorAll('.cloud');
+    clouds.forEach(cloud => {
+      const offset = Math.floor(Math.random() * 40) - 20; // np. -20 do +20 px
+      cloud.style.transform = `translateY(${offset}px)`;
+    });
+  </script>
+
+</body>
+
 </html>
