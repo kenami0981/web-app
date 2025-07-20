@@ -21,21 +21,8 @@
     }
 
     .cloud {
-      background-image: url("images/Cloud.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      /* dopasuj obrazek do rozmiaru chmurki */
-      background-position: center;
-      /* wycentruj */
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
-      width: 200px;
-      /* dodaj rozmiary */
-      height: 120px;
-      padding: 3rem 1.5rem;
-      /*box-shadow: 0 2px 6px rgba(0,0,0,0.1);*/
+      
       white-space: nowrap;
       text-decoration: none;
       color: #333;
@@ -54,24 +41,27 @@
       background-position: center;
       /* wycentruj */
       display: flex;
-      align-items: center;
+      align-items:center;
       justify-content: center;
       width: 200px;
       /* dodaj rozmiary */
       height: 120px;
       padding: 3rem 1.5rem;
       transition: transform 0.3s ease;
+      
     }
 
     .dropbtn {
 
       background-color: transparent;
+      border: none;
+      font-weight: bold;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      margin-top: 9rem;
+      margin-top: 12rem;
       background-color: #f9f9f9;
       min-width: 160px;
       z-index: 1;
@@ -83,19 +73,23 @@
       padding: 12px 16px;
       text-decoration: none;
       display: block;
+      
     }
 
     .dropdown-content a:hover {
       background-color: #ddd;
+      
+      
     }
 
     .dropdown:hover .dropdown-content {
+      max-height: 8em;
+     overflow: auto;
       display: block;
+      
     }
 
-    .dropbtn:hover {
-      background-color: #3e8e41;
-    }
+    
   </style>
 </head>
 
@@ -105,7 +99,8 @@
   <div class="cloud-wrapper">
 
     <div class="dropdown cloud">
-      <button class="dropbtn">Text & Formatting</button>
+      <button class="dropbtn">Text<br>
+      &<br>Formatting</button>
       <div class="dropdown-content">
         <a href="TextFormatting.html">HTML Paragraphs and Text Formatting</a>
         <a href="Lists&Tables.html">List and Tables</a>
@@ -114,7 +109,7 @@
       </div>
     </div>
     <div class="dropdown cloud">
-      <button class="dropbtn">Multimedia & Graphics</button>
+      <button class="dropbtn">Multimedia<br>&<br>Graphics</button>
       <div class="dropdown-content">
         <a href="Images.html">Images</a>
         <a href="MediaElements.html">Media Elements</a>
@@ -126,7 +121,7 @@
       </div>
     </div>
     <div class="dropdown cloud">
-      <button class="dropbtn">Structure & Layout</button>
+      <button class="dropbtn">Structure<br>&<br>Layout</button>
       <div class="dropdown-content">
         <a href="Class&ID.html">Class and ID</a>
         <a href="DIvElement.html">Div Element</a>
@@ -136,7 +131,7 @@
       </div>
     </div>
     <div class="dropdown cloud">
-      <button class="dropbtn">Links & Metadata</button>
+      <button class="dropbtn">Links<br>&<br>Metadata</button>
       <div class="dropdown-content">
         <a href="Anchors&Hyperlinks.html">Anchors and Hyperlinks</a>
         <a href="LinkingResources.html">Linking Resources</a>
@@ -145,7 +140,7 @@
       </div>
     </div>
     <div class="dropdown cloud">
-      <button class="dropbtn">Forms & Input</button>
+      <button class="dropbtn">Forms<br>&<br>Input</button>
       <div class="dropdown-content">
         <a href="Input.html">Input Control Elements</a>
         <a href="Forms.html">Forms</a>
@@ -169,8 +164,10 @@
   <script>
     const clouds = document.querySelectorAll('.cloud');
     clouds.forEach(cloud => {
-      const offset = Math.floor(Math.random() * 40) - 20; // np. -20 do +20 px
-      cloud.style.transform = `translateY(${offset}px)`;
+      const offset = Math.floor(Math.random() * 170) - 20; // np. -20 do +20 px
+      const offset1 = Math.floor(Math.random() * 25) - 50; // np. -20 do +20 px
+      cloud.style.transform = `translateY(${offset}px) translateX(${offset1}px)`;
+      
     });
   </script>
 
