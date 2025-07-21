@@ -4,93 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Kurs HTML</title>
-  <style>
-    body {
-      background-color: rgba(155, 178, 255, 1);
-      background-image: linear-gradient(0deg, rgba(155, 178, 255, 1) 0%, rgba(163, 195, 255, 1) 25%, rgba(255, 253, 127, 1) 75%, rgba(255, 253, 127, 1) 100%);
-      background-repeat: no-repeat;
-    }
-
-    .cloud-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem;
-      position: relative;
-    }
-
-    .cloud {
-
-      
-      white-space: nowrap;
-      text-decoration: none;
-      color: #333;
-      
-      font-size: 1rem;
-    }
-
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-      background-image: url("images/Cloud.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      /* dopasuj obrazek do rozmiaru chmurki */
-      background-position: center;
-      /* wycentruj */
-      display: flex;
-      align-items:center;
-      justify-content: center;
-      width: 200px;
-      /* dodaj rozmiary */
-      height: 120px;
-      padding: 3rem 1.5rem;
-      transition: transform 0.3s ease;
-      
-    }
-
-    .dropbtn {
-
-      background-color: transparent;
-      border: none;
-      font-weight: bold;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      margin-top: 12rem;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      z-index: 1;
-
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-      
-      
-    }
-
-    .dropdown:hover .dropdown-content {
-      max-height: 8em;
-     overflow: auto;
-      display: block;
-      
-    }
-
-    
-  </style>
+  <link rel="stylesheet" href="mainStyle.css">
 </head>
 
 <body>
@@ -98,9 +12,9 @@
   <p>Oto strona gdzie powtarzam sobie HTML</p>
   <div class="cloud-wrapper">
 
-    <div class="dropdown cloud">
-      <button class="dropbtn">Text<br>
-      &<br>Formatting</button>
+    <div class="dropdown">
+      <img src="images/Cloud.png" alt="Chmura" class="cloud-img">
+      <button class="dropbtn">Text<br>&<br>Formatting</button>
       <div class="dropdown-content">
         <a href="TextFormatting.html">HTML Paragraphs and Text Formatting</a>
         <a href="Lists&Tables.html">List and Tables</a>
@@ -108,7 +22,9 @@
         <a href="CharacterEntities.html">Character Entities</a>
       </div>
     </div>
-    <div class="dropdown cloud">
+
+    <div class="dropdown">
+      <img src="images/Cloud.png" alt="Chmura" class="cloud-img">
       <button class="dropbtn">Multimedia<br>&<br>Graphics</button>
       <div class="dropdown-content">
         <a href="Images.html">Images</a>
@@ -120,7 +36,8 @@
         <a href="ProgressBar.html">Progress Bar</a>
       </div>
     </div>
-    <div class="dropdown cloud">
+    <div class="dropdown">
+      <img src="images/Cloud.png" alt="Chmura" class="cloud-img">
       <button class="dropbtn">Structure<br>&<br>Layout</button>
       <div class="dropdown-content">
         <a href="Class&ID.html">Class and ID</a>
@@ -130,7 +47,8 @@
         <a href="DataAttributes.html">Data Attributes</a>
       </div>
     </div>
-    <div class="dropdown cloud">
+    <div class="dropdown">
+      <img src="images/Cloud.png" alt="Chmura" class="cloud-img">
       <button class="dropbtn">Links<br>&<br>Metadata</button>
       <div class="dropdown-content">
         <a href="Anchors&Hyperlinks.html">Anchors and Hyperlinks</a>
@@ -139,7 +57,8 @@
         <a href="ContentLanguages.html">Content Languages</a>
       </div>
     </div>
-    <div class="dropdown cloud">
+    <div class="dropdown">
+      <img src="images/Cloud.png" alt="Chmura" class="cloud-img">
       <button class="dropbtn">Forms<br>&<br>Input</button>
       <div class="dropdown-content">
         <a href="Input.html">Input Control Elements</a>
@@ -147,7 +66,8 @@
         <a href="OutputElement.html">Output Element</a>
       </div>
     </div>
-    <div class="dropdown cloud">
+    <div class="dropdown">
+      <img src="images/Cloud.png" alt="Chmura" class="cloud-img">
       <button class="dropbtn">Advanced</button>
       <div class="dropdown-content">
         <a href="Tabindex.html">Tabindex</a>
@@ -162,7 +82,7 @@
 
 
   <script>
-    const clouds = document.querySelectorAll('.cloud');
+    const clouds = document.querySelectorAll('.dropdown');
     clouds.forEach(cloud => {
       const offset = Math.floor(Math.random() * 170) - 20; // np. -20 do +20 px
       const offset1 = Math.floor(Math.random() * 25) - 50; // np. -20 do +20 px
