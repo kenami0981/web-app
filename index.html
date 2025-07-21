@@ -11,9 +11,9 @@
 </head>
 
 <body>
+  <div id="sky">
   <h1 id="title1">HTML CLOUDS</h1>
   <div class="cloud-wrapper">
-
     <div class="dropdown">
       <img src="images/Cloud.png" alt="Chmura" class="cloud-img">
       <button class="dropbtn">Text<br>&<br>Formatting</button>
@@ -79,6 +79,8 @@
       </div>
     </div>
   </div>
+  </div>
+  
 
 
 
@@ -91,6 +93,24 @@
       cloud.style.transform = `translateY(${offset}px) translateX(${offset1}px)`;
       
     });
+
+    document.addEventListener("DOMContentLoaded", () =>{
+    const sky = document.getElementById("sky");
+    const cloudNum = 25;
+
+function createClouds(){
+        const cloud = document.createElement("img");
+        const randomSize = Math.random() * 400 + 800 ;
+        cloud.style.width = randomSize + "px";
+        cloud.src = "images/clouds.png";
+        sky.appendChild(cloud);
+        cloud.classList.add("cloud");
+    }
+    for (let i = 0; i < cloudNum ; i++){
+    createClouds();
+    }
+
+    })
   </script>
 
 </body>

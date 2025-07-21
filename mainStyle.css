@@ -2,6 +2,7 @@ body {
       background-color: rgba(155, 178, 255, 1);
       background-image: linear-gradient(0deg, rgba(155, 178, 255, 1) 0%, rgba(163, 195, 255, 1) 25%, rgba(255, 253, 127, 1) 75%, rgba(255, 253, 127, 1) 100%);
       background-repeat: no-repeat;
+      overflow: hidden;
     }
 
     .cloud-wrapper {
@@ -12,6 +13,7 @@ body {
       padding: 2rem;
       position: relative;
       animation: 1s ease-in 0s 1 slideIn;
+      z-index: 1;
     }
     @keyframes slideIn {
 0% {
@@ -94,3 +96,23 @@ body {
       font-family:"Montserrat";
       text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
+
+    #sky {
+      height: 100vh;
+      width: 100vw;
+    }
+    @keyframes moveUp {
+    from {
+        transform: translateY(50);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+.cloud {
+  z-index: 0;
+  opacity: 0.2;
+
+    animation: moveUp 50s linear infinite;
+}
