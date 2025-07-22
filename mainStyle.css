@@ -1,8 +1,6 @@
 body {
-      background-color: rgba(155, 178, 255, 1);
-      background-image: linear-gradient(0deg, rgba(155, 178, 255, 1) 0%, rgba(163, 195, 255, 1) 25%, rgba(255, 253, 127, 1) 75%, rgba(255, 253, 127, 1) 100%);
-      background-repeat: no-repeat;
       overflow: hidden;
+      font-family:"Montserrat";
     }
 
     .cloud-wrapper {
@@ -27,21 +25,33 @@ body {
 
     }
 
-    .dropdown {
-      
-      position: relative;
-      width: 200px;
-      height: 120px;
-    }
 
+    .dropdown {
+      position: relative;
+      width: 250px;
+      height: 150px;
+      z-index: 2;
+      margin-bottom: 150px;
+      opacity: 0.8;
+    }
+.dropdown:hover .dropdown-inner {
+  transform: scale(1.15);
+  transform-origin: center center;
+}
+.dropdown-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
     .cloud-img {
+      
+      pointer-events: auto;
       position: absolute;
-      top: 0;
-      left: 0;
+
       width: 100%;
       height: 100%;
       object-fit: contain;
-      pointer-events: none;
       user-select: none;
     }
 
@@ -59,19 +69,20 @@ body {
       color: #333;
       white-space: pre-line;
       cursor: pointer;
+      z-index: 2;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      top: 110%;
+      top: 90%;
       left: 50%;
       transform: translateX(-50%);
       background-color: #f9f9f9;
       min-width: 180px;
       border-radius: 0.5rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      z-index: 10;
+      z-index: 3;
     }
 
     .dropdown-content a {
@@ -79,27 +90,37 @@ body {
       padding: 10px 14px;
       text-decoration: none;
       color: black;
+
     }
 
     .dropdown-content a:hover {
       background-color: #ddd;
     }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+    .dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+  
+}
+
+
     #title1 {
 
       color: white;
       font-size: 8rem;
       justify-self: center;
-      font-family:"Montserrat";
+      
       text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
     #sky {
+      overflow: hidden;
       height: 100vh;
       width: 100vw;
+      background-color: rgba(155, 178, 255, 1);
+      background-image: linear-gradient(0deg, rgba(155, 178, 255, 1) 0%, rgba(163, 195, 255, 1) 50%, rgba(255, 253, 127, 1) 75%, rgba(255, 253, 127, 1) 100%);
+      background-repeat: no-repeat;
+      
     }
     @keyframes moveUp {
     from {
@@ -113,6 +134,6 @@ body {
 .cloud {
   z-index: 0;
   opacity: 0.2;
-
+pointer-events: none;
     animation: moveUp 50s linear infinite;
 }
