@@ -124,7 +124,7 @@ body {
     }
     @keyframes moveUp {
     from {
-        transform: translateY(50);
+        transform: translateY(50px);
     }
     to {
         transform: translateY(-100vh);

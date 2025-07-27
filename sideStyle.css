@@ -1,83 +1,93 @@
 body {
-    font-family:"Montserrat";
-}
+      overflow: hidden;
+      font-family:"Montserrat";
+	  margin: auto;
+	  display: block;
+	  margin: 0;
+    }
 h2 {
-    color: white;
-      font-size: 5rem;
-      justify-self: center;
-      
+	color: white;
+      font-size: 4rem;
       text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
-@import url('https://fonts.googleapis.com/css?family=Bad+Script|Bellefair|Comfortaa|Satisfy|Slabo+27px|Vidaloka');
-
-
-
-/* لون خلفية الصفحة */
-
-#container {
-/* 	العرض تلقائي حتي تكون الصورة متجاوبة مع الشاشاة المختلفة */
-	width: auto;
-/* 	تم وضع اقصي مساحة للعرض حتي نحافظ علي جماليات التصميم */
-
-/* 	الطول تلقائي حتي تحتفظ الصورة اللي بداخله دقتها وتكون متجاوبة */
-	height: 15rem;
-/* 	لتوسيط الحاوية في وسط الصفحة */
-	margin: 5em auto;
-/* 	اي شئ خارج نطاق الحاوية قم بأخفاءه */
-	overflow: hidden;
-/* 	الاطار الخاص بالحاوية */
-	border: 10px solid #EEE5E5;
-	outline: 5px dashed #EEE5E5;
-
-	position: relative;
-/* 	z-index: 1; */
-	
-	
+@media (max-width: 800px) {
+    html {
+        --gap: 1rem;
+    }
 }
-#container img {
-	width: 100%;
-	height: 100%;
-	margin-bottom: -5px;
-	transition: all 0.3s ease-out;
-	position: relative;
-	z-index: 2;
+@media (max-width: 1200px) {
+    html {
+        --gap: 2rem;
+    }
 }
-
-
-/* الطريقة الاولي */
-/* عندما المس الصورة قم بتكبيرها */
-/* #container img:hover {transform: scale(1.2, 1.2);} */
-
-/* الطريقة الثانية */
-/* عندما المس الحاوية قم بتكبير الصورة */
-#container:hover img {
-	transform: scale(1.2, 1.2);
-	z-index: 9;
+.page-wrap {
+	padding: 0 var(--gap);
 }
+html {
+    --maxWidth: 1600px;
+    --gap: 3rem;
+    scrollbar-color: #666 #201c29;
+    color: #fff;
+    overflow-x: hidden;
+    --featured-img: linear-gradient(180deg, #fff, #514d8a);
+    --bg-blend-mode: overlay;
+    background-color: #262626;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(50% 50% at top center, rgba(155, 178, 255, 1), rgb(108, 139, 240)), var(--featured-img);
+    
+}
+.content {
+	background-color: white;
+	border-radius: 20px;
+	color: #201c29;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 1.1rem;
+	z-index: 1;
+	max-width: 90rem;
 
-.box-text {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 3;
-	padding: 10px;
-    background-image: linear-gradient( 135deg, rgba(129, 255, 239, 0.50) 10%, rgba(240, 103, 180, 0.65) 100%);
-	opacity: 1;
-	transition: 0.3s linear;
-	color: #FFF;
-	font-family: 'Bellefair', serif;
-font-family: 'Satisfy', cursive;
-/* font-family: 'Slabo 27px', serif; */
-/* font-family: 'Vidaloka', serif; */
-	text-shadow: 2px 2px 2px #333;
+}
+ol li {
+	font-size: larger;
+	font-weight: 800;
+	margin-bottom: 15px;
+}
+.code {
+	background-color: black;
+	border-radius: 10px;
+	color: #fff;
+	padding: 5px;
+	padding-left: 25px;
+	border-color: rgb(74, 74, 231);
+	border-width:0.2rem;
+	border-style: solid;
 	
 }
-.box-text h1 {
-	font-size: 2.2em;
-	font-family: 'Bellefair', serif;
-font-family: 'Comfortaa', cursive;
+#sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
 }
-.box-text p {font-size: 1.5em;}
-.box-text:hover{opacity: 0;}
+
+@keyframes moveLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-200vw); }
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 100vw; /* start na prawej krawędzi */
+  pointer-events: none;
+  opacity: 0.2;
+  animation-name: moveLeft;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

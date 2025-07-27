@@ -13,56 +13,54 @@
 </head>
 
 <body>
-
-<div id="container">
-<!-- 	الصورة ياللي بداخل الحاوية -->
-	<a href="https://www.facebook.com/groups/ElzeroWebSchool/" target="_blank"><img src="https://static.tumblr.com/f9f4253d58950721ab4e47214ebcac39/asrymop/9P4nnlfhb/tumblr_static_tumblr_static_ck5wlz6qil4ccsgw04cwwocsw_640.gif" alt="Omar"> </a>
-	<div class="box-text">
-	<h1>HTML Paragraphs & Text Formatting</h1>
-	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-	</div>
-</div>
+<div id="sky"></div>
+<div class="page-wrap">
     <h2 id="TextFormatting">HTML Paragraphs & Text Formatting</h2>
-
+<div class="content">
     <ol>
         <li>Mark / Highlighting</li>
-        <p>"This is &lt;mark&gt;another&lt;/mark&gt; paragraph, extra spaces will be removed by browsers"</p>
+        <div class="code"><code>
+        <p>&lt;p>"This is &lt;mark&gt;another&lt;/mark&gt; paragraph, extra spaces will be removed by browsers"&lt;/p></p></code></div>
         <p>"This is <mark>another</mark> paragraph, extra spaces will be removed by browsers"</p><br>
-        <li>Underline</li>
-        <p>This paragraph contains some &lt;u&gt;mispelled&lt;/u&gt; text.</p>
-        <p>This paragraph contains some <u>mispelled</u> text.</p><br>
 
-        <p>I like to write &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;!</p>
+        <li>Underline</li>
+        <div class="code"><code>
+        <p>&lt;p>This paragraph contains some &lt;u&gt;mispelled&lt;/u&gt; text.&lt;/p></p></code></div>
+        <p>This paragraph contains some <u>mispelled</u> text.</p><br>
+        <li>Abbreviation</li>
+        <div class="code"><code>
+        <p>&lt;p>I like to write &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;!&lt;/p></p></code></div>
         <p>I like to write <abbr title="Hypertext Markup Language">HTML</abbr>!</p><br>
         <li>Bold</li>
-        <p>
-            &lt;strong>Bold Text Here&lt;/strong>
-            or
-            &lt;b>Bold Text Here&lt;/b>
-        </p>
+        <div class="code"><code>
+        <p>&lt;p>&lt;strong>Bold Text Here&lt;/strong> or &lt;b>Bold Text Here&lt;/b>&lt;/p>
+        </p></code></div>
         <p>
             <strong>Bold Text Here</strong>
             or
             <b>Bold Text Here</b>
         </p><br>
         <li>Italic</li>
-        <p>&lt;em>Italicized Text Here&lt;/em>
+        <div class="code"><code>
+        <p>&lt;p>&lt;em>Italicized Text Here&lt;/em>
             or
-            &lt;i>Italicized Text Here&lt;/i></p>
+            &lt;i>Italicized Text Here&lt;/i>&lt;/p></p></code></div>
         <p><em>Italicized Text Here</em>
             or
             <i>Italicized Text Here</i>
         </p><br>
         <li>Stricken</li>
-        <p>&lt;s>Struck-through text here&lt;/s></p>
+        <div class="code"><code>
+        <p>&lt;p>&lt;s>Struck-through text here&lt;/s>&lt;/p></p></code></div>
         <p><s>Struck-through text here</s></p><br>
         <li> Superscript and Subscript</li>
-        <p>
+        <div class="code"><code>
+        <p>&lt;p>
             To create superscript:
             &lt;sup>superscript here&lt;/sup>
             To create subscript:
-            &lt;sub>subscript here&lt;/sub>
-        </p>
+            &lt;sub>subscript here&lt;/sub>&lt;/p>
+        </p></code></div>
         <p>
             To create superscript:
             <sup>superscript here</sup>
@@ -70,21 +68,56 @@
             <sub>subscript here</sub>
         </p>
         <li>Quotes</li>
-        <p>&lt;p>She wrote &lt;q>The answer is 42.&lt;/q> and everyone agreed.&lt;/p></p>
+        <div class="code"><code>
+        <p>&lt;p>She wrote &lt;q>The answer is 42.&lt;/q> and everyone agreed.&lt;/p></p></code></div>
         <p>She wrote <q>The answer is 42.</q> and everyone agreed.</p><br>
         <p>The cite attribute can be used to reference the URL of the quoted source:</p>
-        <p>&lt;p>She wrote &lt;q cite="http://example.com/blog/hello-world">The answer is 42.&lt;/q> and everyone agreed.&lt;/p></p>
+        <div class="code"><code>
+        <p>&lt;p>She wrote &lt;q cite="http://example.com/blog/hello-world">The answer is 42.&lt;/q> and everyone agreed.&lt;/p></p></code></div>
         <p>She wrote <q cite="http://example.com/blog/hello-world">The answer is 42.</q> and everyone agreed.</p>
         <p>Note that browsers typically don't show this URL, so if the source is relevant, you should add a hyperlink (a element)
 in addition.</p><br>
         <p>Blockquote</p>
+        <div class="code"><code>
         <p>&lt;blockquote>
  &lt;p>The answer is 42.&lt;/p>
-&lt;/blockquote></p>
+&lt;/blockquote></p></code></div>
         <blockquote>
         <p>The answer is 42.</p>
         </blockquote>
     </ol>
+</div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const sky = document.getElementById("sky");
+  const cloudNum = 25;
+
+  function createClouds() {
+    const cloud = document.createElement("img");
+    cloud.src = "images/clouds.png";
+    cloud.classList.add("cloud");
+
+    const randomSize = Math.random() * 400 + 800;
+    cloud.style.width = randomSize + "px";
+
+    const randomTop = Math.random() * window.innerHeight;
+    cloud.style.top = randomTop + "px";
+
+    const duration = Math.random() * 30 + 60;  // 40-70s
+    const delay = Math.random() * 90;           // 0-30s
+
+    cloud.style.animation = `moveLeft ${duration}s linear ${delay}s infinite`;
+
+    sky.appendChild(cloud);
+  }
+
+  for (let i = 0; i < cloudNum; i++) {
+    createClouds();
+  }
+});
+
+</script>
 </body>
 
 </html>
