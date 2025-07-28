@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Marking up computer code</h2>
-    <ol>
+    <div class="content">
+        <ol>
         <li>Block with &lt;pre> and &lt;code></li>
         <p>If the formatting (white space, new lines, indentation) of the code matters, use the pre element in combination with
 the code element:</p>
-<pre>
+<div class="code"><pre>
     <code>
 &lt;pre>
     &lt;code>
@@ -21,7 +24,7 @@ if x == 42:
     &lt;/code>
 &lt;/pre>
     </code>
-</pre>
+</pre></div>
 <p>Efekt:</p>
 <pre>
     <code>
@@ -33,13 +36,14 @@ if x == 42:
 <p>
 You still have to escape characters with special meaning in HTML (like &lt; with &amp;lt;), so for displaying a block of HTML
 code (&lt;p>This is a paragraph.&lt;/p>), it could look like this:</p>
-<pre>
+<div class="code"><code><pre>
 &lt;pre>
     &lt;code>
         &amp;lt;p>This is a paragraph.&amp;lt;/p>
     &lt;/code>
 &lt;/pre>
 </pre>
+</code></div>
 <p>Efekt:</p>
 <pre>
     <code>
@@ -49,10 +53,13 @@ code (&lt;p>This is a paragraph.&lt;/p>), it could look like this:</p>
     <li>Inline with &lt;code></li>
     <p>If a sentence contains computer code (for example, the name of an HTML element), use the code element to mark it
 up:</p>
-<pre>
+<div class="code"><code><pre>
 &lt;p>The &lt;code>a&lt;/code> element creates a hyperlink.&lt;/p>
 </pre>
+</code></div>
 <p>The <code>a</code> element creates a hyperlink.</p>
     </ol>
+    </div></div>
+    <script src="sideJS.js"></script>
 </body>
 </html>
