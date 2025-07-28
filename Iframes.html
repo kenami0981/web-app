@@ -6,20 +6,22 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+  <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Znacznik &lt;iframe&gt; w HTML5</h2>
+    <div class="content">
+    
 
 <ol>
-  <li>
-    <p><b>Podstawowe informacje</b></p>
+  <li>Podstawowe informacje</li>
     <p>Znacznik <code>&lt;iframe&gt;</code> (inline frame) umożliwia osadzenie innej strony HTML w aktualnym dokumencie. Pozwala to np. wyświetlić inną witrynę, formularz lub dynamiczną treść w wydzielonym obszarze.</p>
     <p>Przykład podstawowy:</p>
-    <p><code>&lt;iframe src="https://en.m.wikipedia.org/wiki/Cat"&gt;&lt;/iframe&gt;</code></p>
+    <div class="code"><code>&lt;iframe src="https://en.m.wikipedia.org/wiki/Cat"&gt;&lt;/iframe&gt;</code></div>
     <iframe src="https://en.m.wikipedia.org/wiki/Cat"></iframe>
-  </li>
+  
 
-  <li>
-    <p><b>Najczęściej używane atrybuty</b></p>
-    <ol>
+  <li>Najczęściej używane atrybuty</li>
+    <ol class="ol-example">
       <li><code>src</code> - adres URL osadzonej strony.</li>
       <li><code>name</code> - nazwa ramki używana do nawigacji z zewnątrz (np. przez linki).</li>
       <li><code>width</code> i <code>height</code> - szerokość i wysokość ramki w pikselach.</li>
@@ -27,38 +29,34 @@
       <li><code>sandbox</code> - nakłada ograniczenia bezpieczeństwa na zawartość iframe.</li>
       <li><code>allowfullscreen</code> - pozwala na korzystanie z pełnego ekranu wewnątrz iframe.</li>
     </ol>
-  </li>
+  
 
-  <li>
-    <p><b>Ustawianie rozmiaru iframe</b></p>
+  <li>Ustawianie rozmiaru iframe  </li>
     <p>Rozmiar iframe definiuje się za pomocą atrybutów <code>width</code> i <code>height</code>, np.:</p>
-    <p><code>&lt;iframe src="https://en.m.wikipedia.org/wiki/Cat" width="800" height="600"&gt;&lt;/iframe&gt;</code></p>
+    <div class="code"><code>&lt;iframe src="https://en.m.wikipedia.org/wiki/Cat" width="800" height="600"&gt;&lt;/iframe&gt;</code></div>
     <iframe src="https://en.m.wikipedia.org/wiki/Cat" width="800" height="600"></iframe>
     <p>HTML5 zaleca użycie wartości w pikselach. Użycie wartości procentowych nie jest już zgodne ze specyfikacją.</p>
-  </li>
 
-  <li>
-    <p><b>Atrybut srcdoc</b></p>
+
+  <li>Atrybut srcdoc</li>
     <p>Atrybut <code>srcdoc</code> pozwala na wstawienie zawartości HTML bezpośrednio w znaczniku:</p>
-    <p><code>&lt;iframe srcdoc="&lt;p&gt;IFrames are cool!&lt;/p&gt;"&gt;&lt;/iframe&gt;</code></p>
+    <div class="code"><code>&lt;iframe srcdoc="&lt;p&gt;IFrames are cool!&lt;/p&gt;"&gt;&lt;/iframe&gt;</code></div>
     <iframe srcdoc="<p>IFrames are cool!</p>"></iframe>
     <p>Jeśli przeglądarka nie obsługuje <code>srcdoc</code>, zostanie użyta zawartość z <code>src</code> (jeśli jest obecny).</p>
-  </li>
+  
 
-  <li>
-    <p><b>Zmiana zawartości iframe z zewnątrz</b></p>
+  <li>Zmiana zawartości iframe z zewnątrz</li>
     <p>Jeśli iframe ma przypisaną nazwę (np. <code>name="myIframe"</code>), można zmieniać jego zawartość klikając link poza ramką:</p>
-    <p><code>&lt;iframe src="https://en.m.wikipedia.org/wiki/Cat" name="myIframe"&gt;&lt;/iframe&gt;</code></p>
-    <p><code>&lt;a href="https://en.m.wikipedia.org/wiki/Dog" target="myIframe"&gt;Zmień zawartość iframe&lt;/a&gt;</code></p>
+    <div class="code"><code>&lt;iframe src="https://en.m.wikipedia.org/wiki/Cat" name="myIframe"&gt;&lt;/iframe&gt;<br>
+      &lt;a href="https://en.m.wikipedia.org/wiki/Dog" target="myIframe"&gt;Zmień zawartość iframe&lt;/a&gt;</code></div>
     <iframe src="https://en.m.wikipedia.org/wiki/Cat" name="myIframe"></iframe><br>
 
 <a href="https://en.m.wikipedia.org/wiki/Dog" target="myIframe">Zmień zawartość iframe</a>
-  </li>
-<li>
-  <p><b>Bezpieczeństwo i nagłówki HTTP</b></p>
+  
+<li>Bezpieczeństwo i nagłówki HTTP</li>
   <p>Oprócz atrybutu <code>sandbox</code>, wiele stron stosuje zabezpieczenia po stronie serwera, które całkowicie uniemożliwiają ich osadzanie w ramkach <code>&lt;iframe&gt;</code>. Są to tzw. nagłówki HTTP polityki bezpieczeństwa:</p>
 
-  <ul>
+  <ul class="ol-example">
     <li><code>X-Frame-Options: DENY</code> - całkowicie blokuje osadzanie strony w iframe.</li>
     <li><code>X-Frame-Options: SAMEORIGIN</code> - pozwala na osadzanie tylko w ramach pochodzących z tej samej domeny.</li>
     <li><code>Content-Security-Policy: frame-ancestors 'none'</code> - jeszcze precyzyjniej definiuje, kto może osadzać stronę w ramce.</li>
@@ -67,7 +65,7 @@
   <p>Takie zabezpieczenia chronią przed tzw. <b>atakami clickjacking</b> - złośliwym osadzaniem strony w niewidocznej ramce i nakłanianiem użytkownika do nieświadomego klikania, np. w przyciski logowania.</p>
   <p>Dodatkowo o ataku clickjacking: rodzaj ataku internetowego, w którym użytkownik jest zwodzony do kliknięcia w elementy interfejsu, które wyglądają inaczej niż w rzeczywistości. Zazwyczaj atakujący wykorzystuje do tego nakładanie warstwy przezroczystej lub półprzezroczystej strony internetowej na inną, zaufaną stronę, tak że użytkownik nieświadomie klika w elementy tej ukrytej strony. </p>
   <p>Oto kilka przykładów tego, jak clickjacking może działać w świecie rzeczywistym:</p>
-  <ul>
+  <ul class="ol-example">
     <li>Użytkownik otrzymuje wiadomość e-mail ze strony, którą uważa za prawdziwą stronę mediów społecznościowych, taką jak Facebook. Klika link, który przenosi go na fałszywą stronę z prawdziwą stroną na Facebooku osadzoną wewnątrz. Użytkownik próbuje zalogować się na konto na Facebooku, wprowadzając swoje dane uwierzytelniające w polach logowania. Jednak fałszywa strona ma niewidoczne pola nałożone na pola Facebooka, umożliwiając cyberprzestępcy kradzież danych uwierzytelniających użytkownika.
 </li>
 <li>Użytkownik widzi reklamę, która wydaje się reklamą znanego banku, takiego jak Chase. Decyduje się założyć konto, więc klika reklamę, która przenosi go na fałszywą stronę internetową z osadzoną wewnątrz stroną internetową banku Chase. Próbuje założyć konto, wypełniając poufne informacje, takie jak numer ubezpieczenia społecznego. Jednak niewidoczne pola pokrywające prawdziwe skopiują informacje i wyślą je cyberprzestępcy.</li>
@@ -79,21 +77,23 @@ Niezależnie od tego, czy cyberprzestępcy sami ukradną dane, czy też zainstal
 Udowodnienie kradzieży tożsamości lub tego, że ktoś przejął Twoje konto bankowe, może być trudne i kosztowne. Odzyskanie strat po tego rodzaju atakach może zająć lata.</p>  
 </ul>
   <p><b>Wniosek:</b> Nie wszystkie strony da się osadzić w <code>&lt;iframe&gt;</code> - nawet jeśli poda się poprawny adres, przeglądarka może zablokować załadowanie zawartości ze względów bezpieczeństwa. Przykład</p>
-  <p>&lt;iframe src="https://youtube.com">&lt;/iframe></p>
+  <div class="code"><code>&lt;iframe src="https://youtube.com">&lt;/iframe></code></div>
   <p>Zwróci nam:</p>
   <iframe src="https://youtube.com"></iframe>
-</li>
-  <li>
-    <p><b>Bezpieczeństwo i sandbox</b></p>
+
+  <li>Bezpieczeństwo i sandbox</li>
     <p>Użycie <code>sandbox</code> jest ważne z punktu widzenia bezpieczeństwa. Ogranicza ono możliwości osadzonej strony - np. blokuje skrypty, formularze, wtyczki i przekierowania.</p>
     <p>Pełne sandboxowanie:</p>
-    <p><code>&lt;iframe sandbox src="https://example.com"&gt;&lt;/iframe&gt;</code></p>
+    <div class="code"><code>&lt;iframe sandbox src="https://example.com"&gt;&lt;/iframe&gt;</code></div>
     <p>Aby częściowo zdjąć ograniczenia, można dodać wybrane wartości, np. <code>allow-scripts</code>, <code>allow-forms</code>, <code>allow-same-origin</code>.</p>
     <p>Przykład ze skryptami i formularzami:</p>
-    <p><code>&lt;iframe sandbox="allow-scripts allow-forms" src="https://example.com"&gt;&lt;/iframe&gt;</code></p>
+    <div class="code"><code>&lt;iframe sandbox="allow-scripts allow-forms" src="https://example.com"&gt;&lt;/iframe&gt;</code></div>
     <p>Uwaga: sandbox nie zastępuje walidacji danych ani filtrowania treści. Stanowi jednak ważną warstwę ochrony w strategii bezpieczeństwa (defense in depth).</p>
     <p>Aby ograniczyć ryzyko ataków typu "bypass", zaleca się użycie nagłówka <code>Content-Security-Policy</code>.</p>
-  </li>
+  
 </ol>
+</div>
+</div>
+<script src="sideJS.js"></script>
 </body>
 </html>
