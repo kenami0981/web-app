@@ -8,7 +8,11 @@
 </head>
 
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Class and ID</h2>
+    <div class="content">
+    
     <p>W HTML atrybuty class i id służą do identyfikowania elementów, co ułatwia ich stylowanie za pomocą CSS oraz
         manipulację przez JavaScript. Choć oba atrybuty mogą wyglądać podobnie, różnią się znaczeniem i sposobem użycia.
     </p>
@@ -16,11 +20,11 @@
         <li>Class - do grupowania</li>
         <p>Atrybut class może być przypisany do wielu elementów i nie musi być unikalny. Umożliwia grupowanie elementów,
             które mają mieć wspólne style. Aby przypisać klasę, wystarczy użyć atrybutu class w znaczniku HTML:</p>
-<pre>&lt;div class="example-class">&lt;/div></pre>
+<div class="code"><code><pre>&lt;div class="example-class">&lt;/div></pre></code></div>
         <p>
             Jeśli chcemy przypisać więcej niż jedną klasę, wystarczy oddzielić je spacją:
         </p>
-<pre>&lt;div class="class1 class2">&lt;/div></pre>
+<div class="code"><code><pre>&lt;div class="class1 class2">&lt;/div></pre></code></div>
         <p>
             W CSS klasy selekcjonujemy za pomocą kropki:
         </p>
@@ -38,7 +42,7 @@ div.highlight {
 </pre>
 <li>Id - dla unikalnego oznaczenia</li>
 <p>Z kolei atrybut id służy do jednoznacznej identyfikacji konkretnego elementu na stronie. Każdy id powinien być unikalny w obrębie całego dokumentu. Przykład użycia:</p>
-<pre>&lt;div id="example-id">&lt;/div></pre>
+<div class="code"><code><pre>&lt;div id="example-id">&lt;/div></pre></code></div>
 <p>Nie wolno przypisywać tego samego id różnym elementom:</p>
 <pre>
 &lt;div id="duplicate">&lt;/div>
