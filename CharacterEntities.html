@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+  <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Character Entities</h2>
+    <div class="content">
+    
+    
     <ol>
-    <li>Character Entities w HTML</li>
-    <ul>
       <li><b>Opis</b></li>
       <p>W HTML niektóre znaki mają specjalne znaczenie (np. &lt;, &gt;, &amp;) lub nie występują bezpośrednio na klawiaturze. Aby ich użyć, nie naruszając struktury kodu, stosujemy tzw. <b>encje znaków</b>.</p>
       <p>Encje można zapisać na dwa sposoby:</p>
-      <ul>
+      <ul class="ol-example">
         <li>Za pomocą <b>nazwy encji</b>: <code>&amp;nazwa;</code></li>
         <li>Za pomocą <b>numeru encji</b>: <code>&amp;#numer;</code></li>
       </ul>
@@ -24,7 +27,7 @@
 <input type="text" placeholder=" &#128269; Search"/>
 
       <li><b>Najczęściej używane encje</b></li>
-      <table border="1" cellpadding="6">
+      <table border="1" cellpadding="6" style="margin: 15px;">
         <thead>
           <tr>
             <th>Charakter</th>
@@ -104,7 +107,8 @@
 <pre>
 &lt;b&gt;&amp;copy; 2016 Stack Exchange Inc.&lt;/b&gt;
 </pre>
-    </ul>
-  </ol>
+    </ol>
+  </div></div>
+  <script src="sideJS.js"></script>
 </body>
 </html>
