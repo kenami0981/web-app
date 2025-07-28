@@ -6,42 +6,41 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+  <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Znacznik &lt;embed&gt; w HTML5</h2>
+    <div class="content">
+    
 
 <ol>
-  <li>
-    <p><b>Opis znacznika</b></p>
+  <li>Opis znacznika</li>
     <p>Znacznik <code>&lt;embed&gt;</code> służy do osadzania treści zewnętrznych, zwykle multimedialnych lub interaktywnych, w dokumencie HTML. Najczęściej używany jest do osadzania plików wideo, dźwięków, animacji (np. Flash - obecnie przestarzałe), dokumentów PDF lub aplikacji napisanych w językach takich jak Java lub Silverlight (również przestarzałe).</p>
     <p>Element <code>&lt;embed&gt;</code> nie ma zamykającego tagu - jest tzw. <i>void element</i>.</p>
-  </li>
+  
 
-  <li>
-    <p><b>Podstawowe atrybuty</b></p>
-    <ol>
+  <li>Podstawowe atrybuty</li>
+    <ol class="ol-example">
       <li><code>src</code> - Ścieżka (adres URL) do osadzanego zasobu.</li>
       <li><code>type</code> - Typ <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types">MIME</a> osadzanej zawartości (np. <code>application/pdf</code>, <code>video/mp4</code>).</li>
       <li><code>width</code> - Szerokość osadzanej zawartości w pikselach.</li>
       <li><code>height</code> - Wysokość osadzanej zawartości w pikselach.</li>
     </ol>
-  </li>
+  
 
-  <li>
-    <p><b>Podstawowe użycie</b></p>
+  <li>Podstawowe użycie</li>
     <p>Najprostsze użycie to osadzenie pliku bez określania typu MIME:</p>
     <p><code>&lt;embed src="plik.swf"&gt;</code></p>
     <p>Obecnie jednak Flash nie jest wspierany, więc bardziej praktycznym przykładem będzie osadzenie wideo:</p>
     <p><code>&lt;embed src="video.mp4" type="video/mp4" width="640" height="480"&gt;</code></p>
-  </li>
+  
 
-  <li>
-    <p><b>Uwaga o zgodności</b></p>
+  <li>Uwaga o zgodności</li>
     <p>Niektóre przeglądarki mogą mieć ograniczone wsparcie dla <code>&lt;embed&gt;</code> w zależności od typu pliku lub konfiguracji zabezpieczeń. Alternatywnymi rozwiązaniami mogą być znaczniki <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code> lub <code>&lt;iframe&gt;</code>.</p>
     <p>Dlatego często stosuje się warstwę zapasową (fallback), np. za pomocą treści alternatywnej lub skryptów JavaScript.</p>
-  </li>
+  
 
-  <li>
-    <p><b>Przykłady praktyczne</b></p>
-    <ol>
+  <li>Przykłady praktyczne</li>
+    <ol class="ol-example">
       <li>Osadzenie pliku PDF:<br>
         <code>&lt;embed src="dokument.pdf" type="application/pdf" width="600" height="400"&gt;</code>
       </li>
@@ -52,16 +51,16 @@
         <code>&lt;embed src="muzyka.mp3" type="audio/mpeg" width="0" height="0"&gt;</code>
       </li>
     </ol>
-  </li>
 
-  <li>
-    <p><b>Różnice między &lt;embed&gt;, &lt;object&gt; i &lt;iframe&gt;</b></p>
-    <ol>
+
+  <li>Różnice między &lt;embed&gt;, &lt;object&gt; i &lt;iframe&gt;</li>
+    <ol class="ol-example">
       <li><code>&lt;embed&gt;</code> - prostszy i bardziej bezpośredni, służy głównie do osadzania plików multimedialnych.</li>
       <li><code>&lt;object&gt;</code> - bardziej rozbudowany, może zawierać zawartość alternatywną.</li>
       <li><code>&lt;iframe&gt;</code> - osadza całą stronę internetową wewnątrz innej strony.</li>
     </ol>
-  </li>
+  
 </ol>
+<script src="sideJS.js"></script>
 </body>
 </html>
