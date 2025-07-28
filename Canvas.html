@@ -11,18 +11,22 @@
 </style>
 </head>
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Canvas</h2>
+    <div class="content">
+    
     <ol>
         <li>Basic Example
             
         </li>
-        <pre>
+        <div class="code"><code><pre>
 &lt;canvas id="myCanvas">
     An alternative text describing what your canvas displays.
 &lt;/canvas>
-        </pre>
+        </pre></code></div>
         <p>JavaScript</p>
-        <pre>
+        <div class="code"><code><pre>
 var ctx = document.getElementById("myCanvas").getContext("2d");
 // now we can refer to the canvas's 2D layer context using `ctx`
 
@@ -31,7 +35,7 @@ ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height); // x, y, width, height
 
 ctx.fillStyle = "#000";
 ctx.fillText("My red canvas with some black text", 70, 50);            
-        </pre>
+        </pre></code></div>
         <canvas id="myCanvas">
   An alternative text describing what your canvas displays.
 </canvas>
@@ -40,7 +44,7 @@ ctx.fillText("My red canvas with some black text", 70, 50);
 
 <li>Drawing two rectangles on a &lt;canvas></li>
 <p>HTML</p>
-<pre>&lt;canvas id="canvas1" width=300 height=200>Your browser does not support canvas.&lt;/canvas></pre>
+<div class="code"><code><pre>&lt;canvas id="canvas1" width=300 height=200>Your browser does not support canvas.&lt;/canvas></pre></code></div>
 <p>CSS</p>
 <pre>
 #canvas1{
@@ -48,7 +52,7 @@ ctx.fillText("My red canvas with some black text", 70, 50);
 }
 </pre>
 <p>JavaScript</p>
-<pre>
+<div class="code"><code><pre>
  window.onload = init; // call init() once the window is completely loaded
  function init(){
  // #1 - get reference to &lt;canvas> element
@@ -68,7 +72,7 @@ ctx.fillText("My red canvas with some black text", 70, 50);
  ctx.fillRect(25,25,50,50);
 
  }
-</pre>
+</pre></code></div>
 <canvas id="canvas1" width=300 height=200>Your browser does not support canvas.</canvas>
     </ol>
         <script>
@@ -107,5 +111,6 @@ window.onload = init; // call init() once the window is completely loaded
 
  }
     </script>
+    <script src="sideJS.js"></script>
 </body>
 </html>
