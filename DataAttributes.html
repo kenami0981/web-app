@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
-    <h1>Atrybuty danych (data attributes) w HTML5</h1>
+  <div id="sky"></div>
+  <div class="page-wrap">
+    <h2>Atrybuty danych (data attributes) w HTML5</h2>
+    <div class="content">
 
   <p>
     Atrybuty danych (<code>data-*</code>) to funkcja wprowadzona w HTML5, która umożliwia przechowywanie 
@@ -19,36 +22,33 @@
     Każdy atrybut danych zaczyna się od prefiksu <code>data-</code>, a po nim następuje dowolna nazwa:
   </p>
 
-  <pre>
-&lt;div data-user-id="1234" data-role="admin"&gt;&lt;/div&gt;
-  </pre>
+  <div class="code"><code><pre>
+&lt;div data-user-id="1234" data-role="admin"&gt;&lt;/div&gt;</pre></code></div>
 
   <p>
     Można w ten sposób zapisywać także dane w formacie JSON:
   </p>
 
-  <pre>
-&lt;div data-settings='{"theme":"dark"}'&gt;&lt;/div&gt;
-  </pre>
+  <div class="code"><code><pre>
+&lt;div data-settings='{"theme":"dark"}'&gt;&lt;/div&gt;</pre></code></div>
 
   <li>Dostęp z poziomu JavaScript</li>
   <p>Nowoczesne przeglądarki pozwalają korzystać z właściwości <code>dataset</code>:</p>
 
-  <pre>
+  <div class="code"><code><pre>
 const element = document.querySelector('div');
 console.log(element.dataset.userId); // "1234"
 element.dataset.role = "editor"; // zmiana wartości
-  </pre>
+  </pre></code></div>
 
   <p>
     W przypadku starszych przeglądarek można używać metod <code>getAttribute</code> i 
     <code>setAttribute</code>:
   </p>
 
-  <pre>
+  <div class="code"><code><pre>
 const id = element.getAttribute('data-user-id');
-element.setAttribute('data-role', 'guest');
-  </pre>
+element.setAttribute('data-role', 'guest');</pre></code></div>
 
   <li>Wsparcie przeglądarek</li>
   <p>
@@ -57,16 +57,15 @@ element.setAttribute('data-role', 'guest');
     używane z poziomu JavaScript.
   </p>
 
-  <pre>
-&lt;img src="photo.jpg" value="test" /&gt;
-  </pre>
+  <div class="code"><code><pre>
+&lt;img src="photo.jpg" value="test" /&gt;</pre></code></div>
 
   <p>
     Tutaj <code>value</code> nie jest atrybutem dozwolonym w &lt;img&gt;, ale może być odczytany przez JS.
   </p>
 
   <li>Podsumowanie</li>
-  <ul>
+  <ul class="ol-example">
     <li>Atrybuty <code>data-*</code> dodają niestandardowe dane do elementów HTML.</li>
     <li>Dane są przechowywane jako łańcuchy znaków.</li>
     <li>Dostęp przez <code>dataset</code> w nowych przeglądarkach, lub <code>getAttribute</code>/<code>setAttribute</code> w starszych.</li>
