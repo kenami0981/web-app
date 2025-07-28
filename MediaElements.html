@@ -8,43 +8,47 @@
 </head>
 
 <body>
+     <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Media Elements</h2>
+    <div class="content">
+    
     <ol>
         <li>Audio</li>
         <p>Aby dodać element audio korzystasz z znacznika &lt;audio></p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;audio controls>
     &lt;source src="media/Silent_Sirenade.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-&lt;/audio>
+&lt;/audio></pre></code></div>
 <audio controls>
     <source src="media/Silent_Sirenade.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio>
-</pre>
+
         <li>Video</li>
         <p>Aby dodać element videp korzystasz z znacznika &lt;video></p>
-<pre>
+ <div class="code"><code><pre>
 &lt;video width="500" height="700" controls>
     &lt;source src="video.mp4" type="video/mp4">
     Your browser does not support the video tag.
 &lt;/video>
-</pre>
-        <video width="700" height="400" controls>
+</pre></code></div>
+        <video width="700" height="400" controls style="margin-bottom: 15px;">
             <source src="media/fire.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <li>Video header or background</li>
         <p>Wideo które będzie zapętlone, idealne do tła lub nagłówka</p>
-        <pre>
+         <div class="code"><code><pre>
 &lt;video width="700" height="400" autoplay muted loop poster="video.jpg" id="videobg">
     &lt;source src="media/fire.mp4" type="video/mp4">
-&lt;/video>
-        </pre>
+&lt;/video></pre></code></div>
         <video width="700" height="400" autoplay muted loop poster="video.jpg" id="videobg">
             <source src="media/fire.mp4" type="video/mp4">
         </video>
     </ol>
+    <script src="sideJS.js"></script>
 </body>
 
 </html>
