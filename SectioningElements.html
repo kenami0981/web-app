@@ -6,35 +6,37 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Sectioning Elements</h2>
+    <div class="content">
+    
     <p>Sectioning elements in HTML are used to define the structure of a document by grouping related content. This includes elements such as &lt;nav>, &lt;article>, &lt;main>, &lt;header>, &lt;footer>, and &lt;section>. Each of these elements helps in organizing a webpage for both developers and assistive technologies.</p>
 
     <ol>
         <li>Nav Element</li>
         <p>The &lt;nav> element is used to group major navigational links. It can contain links to other sections of the page or external pages.</p>
         <p>Inline items:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;nav>
     &lt;a href="https://google.com">Google&lt;/a>
     &lt;a href="https://www.yahoo.com">Yahoo!&lt;/a>
     &lt;a href="https://www.bing.com">Bing&lt;/a>
-&lt;/nav>
-        </pre>
+&lt;/nav></pre></code></div>
         <nav>
             <a href="https://google.com">Google</a>
             <a href="https://www.yahoo.com">Yahoo!</a>
             <a href="https://www.bing.com">Bing</a>
         </nav>
         <p>Use list items when needed:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;nav role="navigation">
     &lt;ul>
         &lt;li>&lt;a href="https://google.com">Google&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://www.yahoo.com">Yahoo!&lt;/a>&lt;/li>
         &lt;li>&lt;a href="https://www.bing.com">Bing&lt;/a>&lt;/li>
     &lt;/ul>
-&lt;/nav>
-        </pre>
+&lt;/nav></pre></code></div>
         <nav role="navigation">
             <ul>
                 <li><a href="https://google.com">Google</a></li>
@@ -43,15 +45,14 @@
             </ul>
         </nav>
         <p>Avoid unnecessary usage of &lt;nav> inside &lt;footer>. The &lt;footer> alone is sufficient:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;footer>
     &lt;a href="#">...&lt;/a>
-&lt;/footer>
-        </pre>
+&lt;/footer></pre></code></div>
 
         <li>Article Element</li>
         <p>The &lt;article> element is used for self-contained, distributable content like blog posts or comments. It can be nested if related.</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;section>
     &lt;article>
         &lt;header>
@@ -66,18 +67,16 @@
             &lt;/article>
         &lt;/section>
     &lt;/article>
-&lt;/section>
-        </pre>
+&lt;/section></pre></code></div>
         <p>Avoid using &lt;article> when content lacks context. Use &lt;main> instead.</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;main>
     &lt;p>I'm the main content, I don't need to belong to an article.&lt;/p>
-&lt;/main>
-        </pre>
+&lt;/main></pre></code></div>
 
         <li>Main Element</li>
         <p>The &lt;main> element holds the primary content of a webpage, should appear only once, and cannot be inside &lt;header>, &lt;footer>, or &lt;nav>.</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;body>
     &lt;header>
         &lt;nav>...&lt;/nav>
@@ -90,36 +89,32 @@
         &lt;/article>
     &lt;/main>
     &lt;footer>...&lt;/footer>
-&lt;/body>
-        </pre>
+&lt;/body></pre></code></div>
 
         <li>Header Element</li>
         <p>The &lt;header> element provides introductory content and usually contains headings or navigation.</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;header>
     &lt;p>Welcome to...&lt;/p>
     &lt;h1>Voidwars!&lt;/h1>
-&lt;/header>
-        </pre>
-        <pre>
+&lt;/header></pre></code></div>
+        <div class="code"><code><pre>
 &lt;article>
     &lt;header>
         &lt;h1>Flexbox: The definitive guide&lt;/h1>
     &lt;/header>
-&lt;/article>
-        </pre>
+&lt;/article></pre></code></div>
 
         <li>Footer Element</li>
         <p>The &lt;footer> element contains footer-related content like copyright info or links.</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;footer>
     &lt;p>All rights reserved&lt;/p>
-&lt;/footer>
-        </pre>
+&lt;/footer></pre></code></div>
 
         <li>Section Element</li>
         <p>The &lt;section> element groups thematically related content. Each section should have a heading.</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;article>
     &lt;header>
         &lt;h2>Blog Post&lt;/h2>
@@ -133,9 +128,9 @@
         &lt;h3>Chapter 2&lt;/h3>
         &lt;p>...&lt;/p>
     &lt;/section>
-&lt;/article>
-        </pre>
+&lt;/article></pre></code></div>
         <p>Do not use &lt;section> as a styling container. Use &lt;div> for that purpose.</p>
     </ol>
+    <script src="sideJS.js"></script>
 </body>
 </html>

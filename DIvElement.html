@@ -12,7 +12,11 @@
     </style>
 </head>
 <body>
-   <h2>Div Element</h2>
+    <div id="sky"></div>
+  <div class="page-wrap">
+    <h2>Div Element</h2>
+    <div class="content">
+   
    <p>The div element in HTML is a container element that encapsulates other elements and can be used to group and
 separate parts of a webpage. A div by itself does not inherently represent anything but is a powerful tool in web
 design. This topic covers the purpose and applications of the div element.</p> 
@@ -21,11 +25,10 @@ design. This topic covers the purpose and applications of the div element.</p>
     <p>The <div> element usually has no specific semantic meaning by itself, simply representing a division, and is typically
 used for grouping and encapsulating other elements within an HTML document and separating those from other
 groups of content. As such, each <div> is best described by its contents.</p>
-    <pre>
+    <div class="code"><code><pre>
 &lt;div>
     &lt;p>Hello! This is a paragraph.&lt;/p>
-&lt;/div>
-    </pre>
+&lt;/div></pre></code></div>
 <div>
  <p>Hello! This is a paragraph.</p>
 </div>
@@ -44,7 +47,7 @@ div {
 elements and allows for further dividing elements into subsections or aid developers with CSS styling.
 The &lt;div class="outer-div"> is used to group together two &lt;div class="inner-div"> elements; each containing
 a &lt;p> element.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div class="outer-div">
     &lt;div class="inner-div">
         &lt;p>This is a paragraph&lt;/p>
@@ -54,7 +57,7 @@ a &lt;p> element.</p>
     &lt;/div>
 &lt;/div>
     
-</pre>
+</pre></code></div>
 <p>Avoid deep &lt;div> nesting
 A deep and oftenly used nested container layouts shows a bad coding style.
 Rounded corners or some similar functions often create such an HTML code. For most of the last generation
@@ -62,5 +65,6 @@ browsers there are CSS3 counterparts. Try to use as little as possible HTML elem
 ratio and reduce page load, resulting in a better ranking in search engines.
 div section Element should be not nested deeper than 6 layers.</p>
 </ol>
+<script src="sideJS.js"></script>
 </body>
 </html>
