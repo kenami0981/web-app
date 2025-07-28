@@ -25,11 +25,13 @@ h2 {
 @media (max-width: 800px) {
     html {
         --gap: 1rem;
+		--text-font-size: 2.2rem;
     }
 }
 @media (max-width: 1200px) {
     html {
         --gap: 2rem;
+		--text-font-size: 1.1rem;
     }
 }
 .page-wrap {
@@ -60,12 +62,18 @@ html {
 	font-size: 1.1rem;
 	z-index: 1;
 	max-width: 90rem;
+	margin-bottom: 2.5rem;
 
 }
 ol li {
 	font-size: larger;
 	font-weight: 1000;
 	margin-bottom: 15px;
+}
+.ol-example li {
+	font-size:medium;
+	margin-bottom: 0px;
+	font-weight: 100;
 }
 .code {
 	background-color: black;
@@ -76,6 +84,9 @@ ol li {
 	border-color: rgb(74, 74, 231);
 	border-width:0.2rem;
 	border-style: solid;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: var(--text-font-size)
 	
 }
 #sky {
@@ -102,4 +113,15 @@ ol li {
   animation-name: moveLeft;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+.wrapper {
+	justify-content: center;
+	flex-wrap: wrap;
+	display: flex;
+	position: relative;
+	
+}
+.wrapper div {
+	padding: 40px;
+	justify-self: center;
 }

@@ -2,84 +2,84 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>List and Tables</title>
-    <link rel="stylesheet" href="sideStyle.css">
+  <meta charset="UTF-8" />
+  <title>List and Tables</title>
+  <link rel="stylesheet" href="sideStyle.css">
 </head>
 
 <body>
+  <div id="sky"></div>
+  <div class="page-wrap">
     <h2>List and Tables</h2>
-    <ol>
+    <div class="content">
+      <ol>
         <li>Ordered List</li>
         <p>
 
-            Numeryczną listę tworzysz używając znacznikó &lt;ol> i &lt;li>
-        <pre>
+          Numeryczną listę tworzysz używając znacznikó &lt;ol> i &lt;li>
+        <div class="code"><code><pre>
 &lt;ol>
     &lt;li>Banan&lt;/li>
     &lt;li>Gruszka&lt;/li>
     &lt;li>Czereśnia&lt;/li>
     &lt;li>Truskawka&lt;/li>
-&lt;/ol></pre>
-        <br>
-        <ol>
-            <li>Banan</li>
-            <li>Gruszka</li>
-            <li>Czereśnia</li>
-            <li>Truskawka</li>
+&lt;/ol></pre></code></div>
+        
+        <ol class="ol-example">
+          <li>Banan</li>
+          <li>Gruszka</li>
+          <li>Czereśnia</li>
+          <li>Truskawka</li>
         </ol><br>
 
         Jeśli natomiast chcesz zdefiniować od której liczby się zaczyna numerowanie to:
-        <pre>
+        <div class="code"><code><pre>
 &lt;ol start="10">
     &lt;li>Banan&lt;/li>
     &lt;li>Gruszka&lt;/li>
     &lt;li>Czereśnia&lt;/li>
     &lt;li>Truskawka&lt;/li>
-&lt;/ol></pre>
-        <br>
-        <ol start="10">
-            <li>Banan</li>
-            <li>Gruszka</li>
-            <li>Czereśnia</li>
-            <li>Truskawka</li>
+&lt;/ol></pre></code></div>
+        <ol start="10" class="ol-example">
+          <li>Banan</li>
+          <li>Gruszka</li>
+          <li>Czereśnia</li>
+          <li>Truskawka</li>
         </ol><br>
         Odwrócona lista:
-        <pre>
+        <div class="code"><code><pre>
 &lt;ol reversed>
     &lt;li>Banan&lt;/li>
     &lt;li>Gruszka&lt;/li>
     &lt;li>Czereśnia&lt;/li>
     &lt;li>Truskawka&lt;/li>
-&lt;/ol></pre>
-        <br>
-        <ol reversed>
-            <li>Banan</li>
-            <li>Gruszka</li>
-            <li>Czereśnia</li>
-            <li>Truskawka</li>
+&lt;/ol></pre></code></div>
+        <ol reversed class="ol-example">
+          <li>Banan</li>
+          <li>Gruszka</li>
+          <li>Czereśnia</li>
+          <li>Truskawka</li>
         </ol>
         </p>
         <li>Unordered List</li>
         <p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;ul>
     &lt;li>Banan&lt;/li>
     &lt;li>Gruszka&lt;/li>
     &lt;li>Czereśnia&lt;/li>
     &lt;li>Truskawka&lt;/li>
-&lt;/ul></pre>
-        <br>
-        <ul>
-            <li>Banan</li>
-            <li>Gruszka</li>
-            <li>Czereśnia</li>
-            <li>Truskawka</li>
+&lt;/ul></pre></code></div>
+        <ul class="ol-example">
+          <li>Banan</li>
+          <li>Gruszka</li>
+          <li>Czereśnia</li>
+          <li>Truskawka</li>
         </ul>
         </p>
         <li>Neasted List (zagnieżdżona lista)</li>
         <p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;ul>
     &lt;li>item 1&lt;/li>
     &lt;li>item 2
@@ -90,25 +90,22 @@
     &lt;/li>
     &lt;li>item 3&lt;/li>
 &lt;/ul>
-    </pre>
-        <br>
-        <ul>
-            <li>item 1</li>
-            <li>item 2
-                <ul>
-                    <li>sub-item 2.1</li>
-                    <li>sub-item 2.2</li>
-                </ul>
-            </li>
-            <li>item 3</li>
+    </pre></code></div>
+        <ul class="ol-example">
+          <li>item 1</li>
+          <li>item 2
+            <ul>
+              <li>sub-item 2.1</li>
+              <li>sub-item 2.2</li>
+            </ul>
+          </li>
+          <li>item 3</li>
         </ul>
 
         </p>
         <li>Tables</li>
-        <table>
-            <tr>
-<td>
-<pre>
+<div class="wrapper">
+              <div class="code"><code><pre>
 &lt;caption&gt;Oceny uczniów - semestr 1&lt;/caption&gt;
 
 &lt;colgroup&gt;
@@ -153,95 +150,95 @@
     &lt;th scope="row"&gt;3&lt;/th&gt;
     &lt;td&gt;Magda Zielińska&lt;/td&gt;
     &lt;td colspan="3"&gt;Brak danych&lt;/td&gt;
-    &lt;td&gt;–&lt;/td&gt;
+    &lt;td&gt;-&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 
 &lt;tfoot&gt;
   &lt;tr&gt;
     &lt;td colspan="5"&gt;Średnia klasowa&lt;/td&gt;
-    &lt;td&gt;3.75&lt;/td&gt;
+    &lt;td&gt;4.00&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tfoot&gt;
 &lt;/table&gt;
-    </pre>
-</td>
+    </pre></code></div>
+<div> 
+              <table border="1">
+                <caption>Oceny uczniów - semestr 1</caption>
 
-                <td>
-<table border="1">
-  <caption>Oceny uczniów - semestr 1</caption>
+                <colgroup>
+                  <col span="1">
+                  <col span="1">
+                  <col span="3">
+                  <col span="1">
+                </colgroup>
 
-  <colgroup>
-    <col span="1">
-    <col span="1">
-    <col span="3">
-    <col span="1">
-  </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" rowspan="2">#</th>
+                    <th scope="col" rowspan="2">Imię i nazwisko</th>
+                    <th scope="col" colspan="3">Oceny cząstkowe</th>
+                    <th scope="col" rowspan="2">Średnia</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">Matematyka</th>
+                    <th scope="col">Fizyka</th>
+                    <th scope="col">Biologia</th>
+                  </tr>
+                </thead>
 
-  <thead>
-    <tr>
-      <th scope="col" rowspan="2">#</th>
-      <th scope="col" rowspan="2">Imię i nazwisko</th>
-      <th scope="col" colspan="3">Oceny cząstkowe</th>
-      <th scope="col" rowspan="2">Średnia</th>
-    </tr>
-    <tr>
-      <th scope="col">Matematyka</th>
-      <th scope="col">Fizyka</th>
-      <th scope="col">Biologia</th>
-    </tr>
-  </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Anna Kowalska</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>4.67</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jan Nowak</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3.33</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Magda Zielińska</td>
+                    <td colspan="3">Brak danych</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
 
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Anna Kowalska</td>
-      <td>5</td>
-      <td>4</td>
-      <td>5</td>
-      <td>4.67</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jan Nowak</td>
-      <td>3</td>
-      <td>3</td>
-      <td>4</td>
-      <td>3.33</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Magda Zielińska</td>
-      <td colspan="3">Brak danych</td>
-      <td>–</td>
-    </tr>
-  </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="5">Średnia klasowa</td>
+                    <td>4.00</td>
+                  </tr>
+                </tfoot>
+              </table>
+              <p>
+              <ul class="ol-example">
+                <li>&lt;caption> - Nadaje tytuł tabeli</li>
+                <li>&lt;thead> - Sekcja nagłówka tabeli.</li>
+                <li>&lt;tbody> - Główna zawartość (ciało) tabeli.</li>
+                <li>&lt;tfoot> - Sekcja stopki - często z podsumowaniem.</li>
+                <li>colgroup> - Grupowanie kolumn do ewentualnej stylizacji.</li>
+                <li>colspan - Łączy komórki w poziomie (liczba kolumn do połączenia).</li>
+                <li>rowspan - Łączy komórki w pionie (liczba wierszy do połączenia).</li>
+                <li>scope="col" - Mówi, że nagłówek dotyczy kolumny.</li>
+                <li>scope="row" - Mówi, że nagłówek dotyczy wiersza.</li>
 
-  <tfoot>
-    <tr>
-      <td colspan="5">Średnia klasowa</td>
-      <td>3.75</td>
-    </tr>
-  </tfoot>
-</table>
-<p><ul>
-    <li>&lt;caption> - Nadaje tytuł tabeli</li>
-    <li>&lt;thead> - Sekcja nagłówka tabeli.</li>
-    <li>&lt;tbody> - Główna zawartość (ciało) tabeli.</li>
-    <li>&lt;tfoot> - Sekcja stopki - często z podsumowaniem.</li>   
-    <li>colgroup> - Grupowanie kolumn do ewentualnej stylizacji.</li>
-    <li>colspan - Łączy komórki w poziomie (liczba kolumn do połączenia).</li>
-    <li>rowspan - Łączy komórki w pionie (liczba wierszy do połączenia).</li>
-    <li>scope="col" - Mówi, że nagłówek dotyczy kolumny.</li>
-    <li>scope="row" - Mówi, że nagłówek dotyczy wiersza.</li>
-    
-</p>
-                </td>
-            </tr>
-        </table>
-        
-    </ol>
+                </p>
+           </div>
+           </div>
 
+      </ol>
+    </div>
+  </div>
+  <script src="sideJS.js"></script>
 </body>
 
 </html>
