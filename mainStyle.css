@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 1500;
+  font-style: normal;
+}
 body {
       overflow: hidden;
-      font-family:"Montserrat";
+      font-family:"MontserratBold";
     }
 
     .cloud-wrapper {

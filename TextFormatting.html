@@ -5,11 +5,7 @@
     <meta charset="UTF-8" />
     <title>Text Formatting</title>
     <link rel="stylesheet" href="sideStyle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    
 </head>
 
 <body>
@@ -88,36 +84,7 @@ in addition.</p><br>
     </ol>
 </div>
     </div>
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const sky = document.getElementById("sky");
-  const cloudNum = 25;
-
-  function createClouds() {
-    const cloud = document.createElement("img");
-    cloud.src = "images/clouds.png";
-    cloud.classList.add("cloud");
-
-    const randomSize = Math.random() * 400 + 800;
-    cloud.style.width = randomSize + "px";
-
-    const randomTop = Math.random() * window.innerHeight;
-    cloud.style.top = randomTop + "px";
-
-    const duration = Math.random() * 30 + 60;  // 40-70s
-    const delay = Math.random() * 90;           // 0-30s
-
-    cloud.style.animation = `moveLeft ${duration}s linear ${delay}s infinite`;
-
-    sky.appendChild(cloud);
-  }
-
-  for (let i = 0; i < cloudNum; i++) {
-    createClouds();
-  }
-});
-
-</script>
+    <script src="sideJS.js"></script>
 </body>
 
 </html>
