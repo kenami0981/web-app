@@ -6,15 +6,18 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
-    <h1>Images
-    </h1>
+  <div id="sky"></div>
+  <div class="page-wrap">
+    <h2>Images</h2>
+    <div class="content">
+    
     <ol>
         <li>Creating an image</li>
         <p>Aby stworzyć obrazek używamy znacznika <code>&lt;img></code> a następnie określamy lokalizację obrazka przy pomocny aytbuta src</p>
-        <code>&lt;img src="images/img.png" alt="Elmo w ogniu"></code><br>
+        <div class="code"><code>&lt;img src="images/img.png" alt="Elmo w ogniu"></code></div>
         <img src="images/img.jpg" alt="Elmo w ogniu">
         <p>Albo jeśli chcesz obrazek z adresu URL</p>
-        <code>&lt;img src="https://www.osvnews.com/wp-content/uploads/2024/02/20240213T0700-ELMO-CHALLENGE-OF-LENT-1772599-scaled.jpg" alt="Sesame Street muppet Elmo" width="250"></code><br>
+        <div class="code"><code>&lt;img src="https://www.osvnews.com/wp-content/uploads/2024/02/20240213T0700-ELMO-CHALLENGE-OF-LENT-1772599-scaled.jpg" alt="Sesame Street muppet Elmo" width="250"></code></div>
         <img src="https://www.osvnews.com/wp-content/uploads/2024/02/20240213T0700-ELMO-CHALLENGE-OF-LENT-1772599-scaled.jpg" alt="Sesame Street muppet Elmo" width="250">
         <li>Choosing alt text</li>
         <p>Tekst alternatywny alt jest czytany przez czytniki ekranu i widoczny, gdy obrazek się nie załaduje.
@@ -60,18 +63,22 @@ An anonymous user wrote:
   <hr>
 
 <li>Responsive image using the srcset attribute</li>
-<pre>
+<div class="code"><code><pre>
 &lt;picture&gt;
-  &lt;source media=&quot;(min-width:650px)&quot; srcset=&quot;https://www.w3schools.com/tags/img_pink_flowers.jpg&quot;&gt;
-  &lt;source media=&quot;(min-width:465px)&quot; srcset=&quot;https://www.w3schools.com/tags/img_white_flower.jpg&quot;&gt;
-  &lt;img src=&quot;https://www.w3schools.com/tags/img_orange_flowers.jpg&quot; alt=&quot;Flowers&quot;&gt;
+  &lt;source media=&quot;(min-width:650px)&quot; 
+  srcset=&quot;https://www.w3schools.com/tags/img_pink_flowers.jpg&quot;&gt;
+  &lt;source media=&quot;(min-width:465px)&quot; 
+  srcset=&quot;https://www.w3schools.com/tags/img_white_flower.jpg&quot;&gt;
+  &lt;img src=&quot;https://www.w3schools.com/tags/img_orange_flowers.jpg&quot; 
+  alt=&quot;Flowers&quot;&gt;
 &lt;/picture&gt;
-</pre>
+</pre></code></div>
 <picture>
   <source media="(min-width:650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
   <source media="(min-width:465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
   <img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers">
 </picture>
     </ol>
+    <script src="sideJS.js"></script>
 </body>
 </html>
