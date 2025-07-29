@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  c1=1
   const sky = document.getElementById("sky");
   const cloudNum = 25;
 
@@ -14,13 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
     cloud.style.top = randomTop + "px";
 
     const duration = Math.random() * 30 + 60;  // 40-70s
-    const delay = Math.random() * 90;           // 0-30s
+    if (c1==1) {
+      delay = 1;
+      c1++;
+    } 
+    else {
+      delay = Math.random() * 90;           // 0-90s
+    }
+    
 
     cloud.style.animation = `moveLeft ${duration}s linear ${delay}s infinite`;
 
     sky.appendChild(cloud);
   }
-
+  
   for (let i = 0; i < cloudNum; i++) {
     createClouds();
   }

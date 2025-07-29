@@ -8,23 +8,27 @@
 </head>
 
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Anchors and Hyperlinks</h2>
+    <div class="content">
+    
     <ol>
         <li>Basic use of anchors to another website:</li>
-        <p>&lt;a href="https://google.com">Here is a link to google&lt;a></p>
+        <div class="code"><code>&lt;a href="https://google.com">Here is a link to google&lt;a></code></div>
         <p><a href="https://google.com">Here is a link to google<a></p><br>
         <li>Link to a page on the same site</li>
-        <p>&lt;a href="TextFormatting.html">Here is a link to Text Formatting&lt;a></p>
+        <div class="code"><code>&lt;a href="TextFormatting.html">Here is a link to Text Formatting&lt;a></code></div>
         <p><a href="TextFormatting.html">Here is a link to Text Formatting<a></p>
         <li>Link to an anchor on your page</li>
-        <p>&lt;a href="#blank">Here is a link section with blank link&lt;a></p>
+        <div class="code"><code>&lt;a href="#blank">Here is a link section with blank link&lt;a></code></div>
         <p><a href="#blank">Here is a link section with blank link<a></p>
             <li>Link that dials a number</li>
-        <p>&lt;a href="tel:123456789">Call me!&lt;a></p>
+        <div class="code"><code>&lt;a href="tel:123456789">Call me!&lt;a></code></div>
         <p><a href="tel:123456789">Call me!</a></p>
 
         <li>Open link in new tab</li>
-        <p>&lt;a id="blank" href="https://goalkicker.com" target="_blank">Link&lt;/a></p>
+        <div class="code"><code>&lt;a id="blank" href="https://goalkicker.com" target="_blank">Link&lt;/a></code></div>
         <p><a id="blank" href="https://goalkicker.com" target="_blank">Link with target="_blank</a></p>
         <p style="max-width: 700px;">Uwaga! Jeśli korzystasz z atrybutu target="_blank" to możesz narazić użytkownika na tak zwany tabnabbing. Dajesz wtedy stronie do której linkujesz dostęp do obiektu "window.opener" w JS.
             Pozwala to zalinkowanej stronie zmienić zawartość i otworzyć inną stronę na miejscu twojej strony! Ma to miejsce wtedy kiedy zalinkowana strona ma jakiś złośliwy kod (została ona zainfekowana
@@ -34,18 +38,16 @@
         </p>
         <li>Link that runs email client</li>
         <p>This will put the email address example@example.com as the recipient for the newly created email.</p>
-        <p>&lt;a href="mailto:example@example.com">Send email&lt;/a></p>
+        <div class="code"><code>&lt;a href="mailto:example@example.com">Send email&lt;/a></code></div>
         <p><a href="mailto:example@example.com">Send email</a></p>
         <p>Subject and body text
         You can populate the subject and body for the new email as well:</p>
-        <p>&lt;a href="mailto:example@example.com?subject=Example+subject&body=Message+text">Send email&lt;/a></p>
+        <div class="code"><code>&lt;a href="mailto:example@example.com?subject=Example+subject&body=Message+text">Send email&lt;/a></code></div>
         <a href="mailto:example@example.com?subject=Example+subject&body=Message+text">Send email</a><br>
         <p>Those values must be <a href="https://en.wikipedia.org/wiki/Percent-encoding">URL encoded.</a></p>
-        <!-- <a href="https://goalkicker.com" target="_self">Link</a><br>
-        <a href="https://goalkicker.com" target="_parent">Link</a><br>
-        <a href="https://goalkicker.com" target="_top">Link</a><br> -->
         
     </ol>
+    <script src="sideJS.js"></script>
 </body>
 
 </html>
