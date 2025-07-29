@@ -11,7 +11,11 @@
 </head>
 
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Meta Information</h2>
+    <div class="content">
+    
     <ol>
         <li>Page Information</li>
         <ul>
@@ -49,16 +53,16 @@
             <p>The <code>robots</code> meta tag tells search engines what they are allowed (or not allowed) to do with a
                 web page. You can control whether search engines should index the page or follow the links on it. Below
                 are common values:</p>
-            <ul>
-                <li><b>all</b> - Default; equivalent to <code>index, follow</code></li>
-                <li><b>noindex</b> - Prevent indexing of the page</li>
-                <li><b>nofollow</b> - Prevent search engines from following any links on the page</li>
-                <li><b>none</b> - Equivalent to <code>noindex, nofollow</code></li>
-                <li><b>noarchive</b> - Don't allow cached versions in search results</li>
-                <li><b>nosnippet</b> - Don't show a snippet in search results</li>
-                <li><b>notranslate</b> - Don't allow translation options in search</li>
-                <li><b>noimageindex</b> - Prevent indexing of images on the page</li>
-                <li><b>unavailable_after</b> - Remove the page from search after a specific RFC 850 date/time</li>
+            <ul class="ol-example">
+                <li>all - Default; equivalent to <code>index, follow</code></li>
+                <li>noindex - Prevent indexing of the page</li>
+                <li>nofollow - Prevent search engines from following any links on the page</li>
+                <li>none - Equivalent to <code>noindex, nofollow</code></li>
+                <li>noarchive - Don't allow cached versions in search results</li>
+                <li>nosnippet - Don't show a snippet in search results</li>
+                <li>notranslate - Don't allow translation options in search</li>
+                <li>noimageindex - Prevent indexing of images on the page</li>
+                <li>unavailable_after - Remove the page from search after a specific RFC 850 date/time</li>
             </ul>
             <p>Note: Explicitly specifying <code>index</code> and <code>follow</code> is not required, as these are
                 assumed by default if not overridden.</p>
@@ -69,17 +73,16 @@
             character encoding (examples include windows-1252, ISO-8859-2, Shift_JIS, and UTF-8). UTF-8 (Unicode) is the
             most widely
             used and should be used for any new project.</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;meta charset="UTF-8">
-&lt;meta charset="ISO-8859-1">
-</pre>
+&lt;meta charset="ISO-8859-1"></pre></code></div>
         <p>All browsers have always recognized the &lt;meta charset> form, but if you for some reason need your page to
             be
             valid HTML 4.01, you can use the following instead:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8">
 &lt;meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-</pre>
+</pre></code></div>
         <li>Social Media</li>
         <p>Meta tagi, takie jak <code>og:title</code> czy <code>twitter:card</code>, służą do przekazywania informacji
             o stronie serwisom społecznościowym. Nie są one widoczne dla użytkownika odwiedzającego stronę,
@@ -87,21 +90,21 @@
         <p>Dzięki nim, po wklejeniu linku do strony w poście, automatycznie pojawia się tytuł, opis i miniatura —
             co przyciąga uwagę i zachęca do kliknięcia.</p>
         <p>Przykłady</p>
-        <pre>
+        
         Open Graph (Facebook, LinkedIn itp.)
+        <div class="code"><code><pre>
 &lt;meta property="og:title" content="Tytuł treści">
 &lt;meta property="og:description" content="Opis strony, który pojawi się przy udostępnianiu linku.">
 &lt;meta property="og:image" content="https://example.com/obrazek.jpg">
 &lt;meta property="og:url" content="https://example.com/podstrona">
 &lt;meta property="og:type" content="website">
-&lt;meta property="og:site_name" content="Nazwa strony">
+&lt;meta property="og:site_name" content="Nazwa strony"></pre></code></div>
 
         Twitter
-&lt;meta name="twitter:card" content="summary_large_image">
+<div class="code"><code><pre>&lt;meta name="twitter:card" content="summary_large_image">
 &lt;meta name="twitter:title" content="Tytuł treści na Twitterze">
 &lt;meta name="twitter:description" content="Krótki opis widoczny pod linkiem.">
-&lt;meta name="twitter:image" content="https://example.com/twitter-image.jpg">
-    </pre>
+&lt;meta name="twitter:image" content="https://example.com/twitter-image.jpg"></pre></code></div>
         <p>
         <pre>Na urządzeniach mobilnych (szczególnie z systemem iOS i przeglądarką Safari), numer telefonu wpisany jako zwykły tekst, np.:
 &lt;p>Skontaktuj się z nami: 123 456 789&lt;/p>
@@ -110,7 +113,7 @@ automatycznie zostaje rozpoznany jako numer telefonu i zamieniony na klikalny li
 Dzięki temu użytkownik może w jedno kliknięcie zadzwonić.</pre>
         </p>
         <p>Czasami algorytmy mylą się i:</p>
-        <ul>
+        <ul class="ol-example">
             <li>potraktują ISBN, numer zamówienia lub numer referencyjny jako numer telefonu,</li>
             <li>co prowadzi do niepotrzebnych linków,</li>
             <li>a to może wyglądać nieprofesjonalnie lub wprowadzać w błąd.</li>
@@ -150,6 +153,8 @@ Below meta tag(s) will open web app in full-screen mode (without address bar).</
 <p><b>Android Chrome</b><br>&lt;meta name="theme-color" content="black"></p>
 <p><b>IOS</b><br>&lt;meta name="apple-mobile-web-app-status-bar-style" content="black"></p>
     </ol>
+    </div></div>
+    <script src="sideJS.js"></script>
 </body>
 
 </html>
