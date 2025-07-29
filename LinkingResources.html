@@ -9,11 +9,13 @@
 </head>
 
 <body>
-
-    <h1>Linking Resources (Łączenie zasobów zewnętrznych)</h1>
+    <div id="sky"></div>
+  <div class="page-wrap">
+    <h2>Linking Resources</h2>
+    <div class="content">
     <ol>
         <li>Atrybuty znacznika &lt;link&gt;</li>
-        <ul>
+        <ul class="ol-example">
             <li><code>charset</code> - kodowanie znaków w dołączonym dokumencie</li>
             <li><code>crossorigin</code> - sposób obsługi żądań cross-origin</li>
             <li><code>href</code> - lokalizacja zasobu</li>
@@ -30,17 +32,17 @@
         <li>JavaScript</li>
 
         <h5>Synchronous (standardowo)</h5>
-        <pre>&lt;script src="path/to.js"&gt;&lt;/script&gt;</pre>
+        <div class="code"><code><pre>&lt;script src="path/to.js"&gt;&lt;/script&gt;</pre></code></div>
         <p>Skrypt ładuje się i wykonuje od razu, zanim przeglądarka przejdzie dalej z parsowaniem HTML.<br>
             Najczęściej umieszczany tuż przed zamykającym <code>&lt;/body&gt;</code>, aby nie blokować ładowania strony.
         </p>
 
         <h5>Asynchronous</h5>
-        <pre>&lt;script src="path/to.js" async&gt;&lt;/script&gt;</pre>
+        <div class="code"><code><pre>&lt;script src="path/to.js" async&gt;&lt;/script&gt;</pre></code></div>
         <p>Ładuje się równolegle i wykonuje się natychmiast po pobraniu. Może przerwać parsowanie HTML.</p>
 
         <h5>Deferred</h5>
-        <pre>&lt;script src="path/to.js" defer&gt;&lt;/script&gt;</pre>
+        <div class="code"><code><pre>&lt;script src="path/to.js" defer&gt;&lt;/script&gt;</pre></code></div>
         <p>Skrypt ładuje się równolegle z HTML, ale czeka z wykonaniem aż cały HTML zostanie sparsowany. Gwarantuje
             kolejność wykonania.</p>
 
@@ -49,73 +51,71 @@
         <p>Pokazuje treść, jeśli JavaScript jest wyłączony lub nieobsługiwany.</p>
 
         <li>External CSS Stylesheet</li>
-        <pre>&lt;link rel="stylesheet" href="path/to.css"&gt;</pre>
+        <div class="code"><code><pre>&lt;link rel="stylesheet" href="path/to.css"&gt;</pre></code></div>
         <p>Najlepiej umieszczać w <code>&lt;head&gt;</code>, aby styl ładował się na początku. Jeśli natomiast zrobisz:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;head>
     &lt;link rel="stylesheet" type="text/css" href="general.css">
     &lt;link rel="stylesheet" type="text/css" href="specific.css">
-&lt;/head></pre>
+&lt;/head></pre></code></div>
 <p>W tym wypadku pamiętaj że jeśli użyjesz wielu stylów, to ten drugi (specific.css) nadpisze style w general.css (nadpisze tylko wtedy kiedy oba elementy będą się odwoływać do tego samego znacznika, id lub klasy) </p>
 
         <li>Alternatywa: @import w &lt;style&gt;</li>
-        <pre>
+        <div class="code"><code><pre>
 &lt;style&gt;
   @import("path/to.css");
-&lt;/style&gt;
-</pre>
+&lt;/style&gt;</pre></code></div>
 
         <li>Favicon (ikona strony)</li>
-        <pre>
+        <div class="code"><code><pre>
 &lt;link rel="icon" type="image/png" href="/favicon.png"&gt;
-&lt;link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"&gt;
-</pre>
+&lt;link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"&gt;</pre></code></div>
         <p>Favicon może być automatycznie pobrany z <code>/favicon.ico</code>. Zmiany mogą nie być od razu widoczne
             przez
             cache.</p>
 
         <li>Alternate CSS</li>
-        <pre>&lt;link rel="alternate stylesheet" href="path/to/style.css" title="yourTitle"&gt;</pre>
+        <div class="code"><code><pre>&lt;link rel="alternate stylesheet" href="path/to/style.css" title="yourTitle"&gt;</pre></code></div>
         <p>Niektóre przeglądarki pozwalają użytkownikowi wybrać styl przez ustawienia (np. Firefox: Widok &gt; Styl
             strony).
         </p>
 
         <li>Resource Hints</li>
         <h5>Preconnect</h5>
-        <pre>&lt;link rel="preconnect" href="URL"&gt;</pre>
+        <div class="code"><code><pre>&lt;link rel="preconnect" href="URL"&gt;</pre></code></div>
         <p>Wykonuje DNS + TCP + opcjonalnie TLS. Eksperymentalne.</p>
 
         <h5>DNS-Prefetch</h5>
-        <pre>&lt;link rel="dns-prefetch" href="URL"&gt;</pre>
+        <div class="code"><code><pre>&lt;link rel="dns-prefetch" href="URL"&gt;</pre></code></div>
         <p>Wstępnie rozwiązuje nazwę DNS.</p>
 
         <h5>Prefetch</h5>
-        <pre>&lt;link rel="prefetch" href="URL"&gt;</pre>
+        <div class="code"><code><pre>&lt;link rel="prefetch" href="URL"&gt;</pre></code></div>
         <p>Pobiera zasób wcześniej do cache.</p>
 
         <h5>Prerender</h5>
-        <pre>&lt;link rel="prerender" href="URL"&gt;</pre>
+        <div class="code"><code><pre>&lt;link rel="prerender" href="URL"&gt;</pre></code></div>
         <p>Ładuje i renderuje stronę w tle. Eksperymentalne.</p>
 
         <li>Media Attribute</li>
-        <pre>&lt;link rel="stylesheet" href="print.css" media="print"&gt;</pre>
+        <div class="code"><code><pre>&lt;link rel="stylesheet" href="print.css" media="print"&gt;</pre></code></div>
         <p>Styl ładowany tylko dla wydruku lub konkretnego typu urządzenia.</p>
 
         <li>Prev & Next</li>
-        <pre>
+        <div class="code"><code><pre>
 &lt;link rel="prev" href="http://example.com/previous-page"&gt;
 &lt;link rel="next" href="http://example.com/next-page"&gt;
-</pre>
+</pre></code></div>
         <p>Używane w artykułach lub seriach do nawigacji między stronami.</p>
 
         <li>Web Feed (RSS / Atom)</li>
-        <pre>
+        <div class="code"><code><pre>
 &lt;link rel="alternate" type="application/atom+xml" href="http://example.com/feed.xml" /&gt;
 &lt;link rel="alternate" type="application/rss+xml" href="http://example.com/feed.xml" /&gt;
-</pre>
+</pre></code></div>
         <p>Umożliwia wykrycie kanałów RSS/Atom przez przeglądarki lub aplikacje czytające.</p>
     </ol>
-
+<script src="sideJS.js"></script>
 </body>
 
 </html>
