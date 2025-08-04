@@ -8,11 +8,15 @@
 </head>
 
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Output Element</h2>
+    <div class="content">
+    
     <p>Element &lt;output> w HTML służy do wyświetlania wyników obliczeń lub operacji (np. sumy dwóch liczb, wyników
         formularza itp.). Jest przydatny, gdy chcesz pokazać dynamiczne wyniki na stronie bez potrzeby odświeżania jej.
         Przyład:</p>
-    <pre>
+    <div class="code"><code><pre>
 &lt;form id="form1" id="form1" oninput="out1.value = parseInt(in1.value,10) + parseInt(in2.value,10)">
     &lt;fieldset>
         &lt;legend>Dodawanie&lt;/legend>
@@ -20,8 +24,7 @@
         &lt;input name="in2" id="in2" type="number" value="0">
     &lt;/fieldset>
     &lt;output form="form1" name="out1" for="in1 in2">0&lt;/output>
-&lt;/form>
-</pre>
+&lt;/form></pre></code></div>
 <p><b>Efekt:</b></p>
     <form id="form1" id="form1" oninput="out1.value = parseInt(in1.value,10) + parseInt(in2.value,10)">
         <fieldset>
@@ -58,7 +61,7 @@
         znacznika zamykającego. Używa się ich wyłącznie z otwierającym tagiem, np. &lt;br&gt;.</p>
 
     <p><b>Cechy void elements:</b></p>
-    <ol>
+    <o class="ol-example">
         <li>Nie zawierają treści ani elementów wewnętrznych.</li>
         <li>Nie wymagają znacznika zamykającego.</li>
         <li>W HTML5 nie trzeba dodawać ukośnika (/) - ale jest to tolerowane.</li>
@@ -132,7 +135,8 @@
         <li>W XHTML używa się &lt;br /&gt;, &lt;img /&gt; - to wymóg składni XML.</li>
         <li>W HTML5 zaleca się pisać po prostu &lt;br&gt; bez zamykania ukośnikiem.</li>
     </ol>
-
+</div></div>
+<script src="sideJS.js"></script>
 </body>
 
 </html>
