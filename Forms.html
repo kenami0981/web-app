@@ -8,10 +8,14 @@
 </head>
 
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Forms</h2>
+    <div class="content">
+    
     <ol>
         <li>Submitting</li>
-        <ul>
+        <ul class="ol-example">
             <li>Atrybut action</li>
             &lt;form action="action.php">
             <li>Atrybut method</li>
@@ -29,18 +33,17 @@
             Images and files can be uploaded/submitted to server by setting enctype attribute of form tag to
             multipart/formdata. enctype specifies how form data would be encoded while submitting to the server.
         </p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;form method="post" enctype="multipart/form-data" action="upload.php">
     &lt;input type="file" name="pic" />
     &lt;input type="submit" value="Upload" />
-&lt;/form>
-</pre>
+&lt;/form></pre></code></div>
         <li>Grouping a few input fields</li>
         <p>While designing a form, you might like to group a few input fields into a group to help organise the form
             layout.
             This can be done by using the tag . Here is an example for using it.
             For each fieldset, you can set a legend for the set using the tag LEGEND TEXT</p>
-<pre>
+<div class="code"><code><pre>
 &lt;form>
     &lt;fieldset>
         &lt;legend>1st field set:&lt;/legend>
@@ -57,9 +60,7 @@
         &lt;input type="text">&lt;br>
     &lt;/fieldset>&lt;br>
     &lt;input type="submit" value="Submit">
-&lt;/form>
-
-</pre>
+&lt;/form></pre></code></div>
 <form>
  <fieldset>
  <legend>1st field set:</legend>
@@ -79,6 +80,8 @@
 </form>
 
     </ol>
+    </div></div>
+    <script src="sideJS.js"></script>
 </body>
 
 </html>
