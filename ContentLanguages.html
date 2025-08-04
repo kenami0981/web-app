@@ -6,74 +6,65 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Content Languages</h2>
+    <div class="content">
+    
 
 <ol>
-    <li>
-        <p><b>Base Document Language</b></p>
+    <li>Base Document Language</li>
         <p>Najlepszą praktyką jest deklarowanie podstawowego języka dokumentu w znaczniku <code>&lt;html&gt;</code> za pomocą atrybutu <code>lang</code>:</p>
-        <pre>
-&lt;html lang="en"&gt;
-        </pre>
+        <div class="code"><code><pre>
+&lt;html lang="en"&gt;</pre></code></div>
         <p>Jeśli w dokumencie nie określono innych języków, przyjmuje się, że cała zawartość (tekst elementów oraz wartości tekstowe atrybutów) jest w tym języku.</p>
         <p>Fragmenty w innych językach powinny mieć swój własny atrybut <code>lang</code>, który nadpisze ustawienie globalne.</p>
-    </li>
+    
 
-    <li>
-        <p><b>Element Language</b></p>
+    <li>Element Language</li>
         <p>Atrybut <code>lang</code> można również stosować do poszczególnych elementów, by określić ich język:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;p lang="en"&gt;This text is in English.&lt;/p&gt;
-&lt;p lang="en" title="This attribute is also in English."&gt;More English text.&lt;/p&gt;
-        </pre>
+&lt;p lang="en" title="This attribute is also in English."&gt;More English text.&lt;/p&gt;</pre></code></div>
         <p>Deklaracja języka jest dziedziczona — oznacza to, że potomne elementy automatycznie przyjmują język nadrzędny:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;div lang="en"&gt;
     &lt;p&gt;English paragraph.&lt;/p&gt;
     &lt;p title="Inherited attribute."&gt;Also English.&lt;/p&gt;
-&lt;/div&gt;
-        </pre>
-    </li>
+&lt;/div&gt;</pre></code></div>
+    
 
-    <li>
-        <p><b>Elements with Multiple Languages</b></p>
+    <li>Elements with Multiple Languages</li>
         <p>Można nadpisać język w obrębie jednego elementu, stosując <code>lang</code> dla jego części:</p>
-        <pre>
-&lt;p lang="en"&gt;This sentence includes the German word &lt;span lang="de"&gt;Hallo&lt;/span&gt;.&lt;/p&gt;
-        </pre>
+        <div class="code"><code><pre>
+&lt;p lang="en"&gt;This sentence includes the German word &lt;span lang="de"&gt;Hallo&lt;/span&gt;.&lt;/p&gt;</pre></code></div>
         <p>W ten sposób możliwe jest precyzyjne oznaczenie języka dla każdego fragmentu tekstu.</p>
-    </li>
+    
 
-    <li>
-        <p><b>Regional URLs</b></p>
+    <li>Regional URLs</li>
         <p>Atrybut <code>hreflang</code> w znacznikach <code>&lt;a&gt;</code> i <code>&lt;area&gt;</code> informuje o języku zawartości podlinkowanej strony. Przykład:</p>
-        <pre>
-&lt;a href="https://example.org" hreflang="en"&gt;example.org&lt;/a&gt;
-        </pre>
+        <div class="code"><code><pre>
+&lt;a href="https://example.org" hreflang="en"&gt;example.org&lt;/a&gt;</pre></code></div>
         <p>Wartość <code>hreflang</code> powinna być poprawnym kodem języka wg standardu <a href="https://tools.ietf.org/html/rfc5646" target="_blank">RFC 5646</a> (np. <code>en</code>, <code>pl-PL</code>, <code>fr-CA</code>).</p>
-    </li>
+    
 
-    <li>
-        <p><b>Handling Attributes with Different Languages</b></p>
+    <li>Handling Attributes with Different Languages</li>
         <p>Jeśli chcesz określić język dla wartości atrybutu lub części tekstu innej niż język otaczającego elementu, możesz użyć <code>lang</code> w niemal każdym elemencie (poza wyjątkami HTML 4.0 takimi jak: <code>script</code>, <code>iframe</code>, <code>meta</code> itd.). Przykład:</p>
-        <pre>
+        <div class="code"><code><pre>
 &lt;p lang="en" title="An English paragraph"&gt;
     &lt;span lang="de" title="A German sentence"&gt;Hallo Welt!&lt;/span&gt;
-&lt;/p&gt;
-        </pre>
+&lt;/p&gt;</pre></code></div>
         <p>Dzięki temu możliwe jest oznaczenie różnojęzycznej zawartości w sposób precyzyjny i semantycznie poprawny.</p>
-    </li>
+    
     <li><p><b>Dlaczego warto używać atrybutu <code>lang</code>?</b></p>
-<ul>
-  <li>
-    <b>Dostępność (accessibility)</b><br>
+<ul class="ol-example">
+  <li>Dostępność (accessibility)
     Atrybut <code>lang</code> umożliwia czytnikom ekranu poprawną wymowę tekstu w odpowiednim języku. Jeśli język nie jest zadeklarowany, czytnik może przeczytać tekst z nieprawidłową wymową.
 
     <p><b>Przykład:</b></p>
-    <pre>
+    <div class="code"><code><pre>
 &lt;p lang="en"&gt;Hello!&lt;/p&gt;
-&lt;p lang="fr"&gt;Bonjour!&lt;/p&gt;
-    </pre>
+&lt;p lang="fr"&gt;Bonjour!&lt;/p&gt;</pre></code></div>
     Czytnik automatycznie przełączy głos na angielski lub francuski w zależności od <code>lang</code>.
   </li>
 
@@ -82,9 +73,8 @@
     Wyszukiwarki, takie jak Google, wykorzystują <code>lang</code> do lepszego zrozumienia języka strony. Pomaga to użytkownikom trafić na treści w ich własnym języku oraz ułatwia pozycjonowanie stron międzynarodowych.
 
     <p><b>Przykład:</b></p>
-    <pre>
-&lt;html lang="pl"&gt;
-    </pre>
+    <div class="code"><code><pre>
+&lt;html lang="pl"&gt;</pre></code></div>
     Dzięki temu Google wie, że strona jest po polsku i może dopasować ją do wyników wyszukiwania w tym języku.
   </li>
 
@@ -93,9 +83,8 @@
     Przeglądarki rozpoznają język dokumentu dzięki <code>lang</code>. Bez tego mogą nie zaproponować tłumaczenia lub zaproponować błędne.
 
     <p><b>Przykład:</b></p>
-    <pre>
-&lt;html lang="de"&gt;
-    </pre>
+    <div class="code"><code><pre>
+&lt;html lang="de"&gt;</pre></code></div>
     Chrome wykryje, że strona jest po niemiecku i zaproponuje tłumaczenie na język użytkownika.
   </li>
 
@@ -104,10 +93,9 @@
     Przeglądarki dostosowują komunikaty błędów formularza do języka dokumentu.
 
     <p><b>Przykład:</b></p>
-    <pre>
+    <div class="code"><code><pre>
 &lt;html lang="pl"&gt;
-&lt;input type="email" required&gt;
-    </pre>
+&lt;input type="email" required&gt;</pre></code></div>
     Z lang="pl" → "Proszę podać adres e-mail."<br>
 Z lang="en" → "Please fill out this field."
   </li>
@@ -117,14 +105,15 @@ Z lang="en" → "Please fill out this field."
     Systemy CDN mogą przechowywać różne wersje strony w zależności od języka, co poprawia wydajność i personalizację.
 
     <p><b>Przykład:</b></p>
-    <pre>
-&lt;html lang="en-US"&gt;
-    </pre>
+    <div class="code"><code><pre>
+&lt;html lang="en-US"&gt;</pre></code></div>
     Dzięki temu użytkownicy z USA mogą otrzymać wersję zoptymalizowaną pod ich region.
   </li>
   
 </ul>
 </li>
 </ol>
+</div></div>
+<script src="sideJS.js"></script>
 </body>
 </html>
