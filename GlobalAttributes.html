@@ -6,41 +6,43 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+  <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Global Attributes</h2>
+    <div class="content">
+    
     <ol>
     <li>Globalne atrybuty</li>
     <ul>
       <li><b>class</b></li>
       <p>Określa jedną lub więcej nazw klas dla elementu.</p>
-      <p>&lt;element class="nazwa-klasy"></p>
+      <div class="code"><code><p>&lt;element class="nazwa-klasy"></p></code></div>
 
       <li><b>id</b></li>
       <p>Unikalny identyfikator dla elementu.</p>
-      <p>&lt;element id="unikalny-id"></p>
+      <div class="code"><code><p>&lt;element id="unikalny-id"></p></code></div>
 
       <li><b>contenteditable</b></li>
       <p>Umożliwia edytowanie treści danego elementu jak w polu tekstowym.</p>
       <p>Przykład:</p>
-<pre>
-&lt;p contenteditable&gt;To jest edytowalny paragraf.&lt;/p&gt;
-</pre>
+<div class="code"><code><pre>
+&lt;p contenteditable&gt;To jest edytowalny paragraf.&lt;/p&gt;</pre></code></div>
 <p contenteditable>To jest edytowalny paragraf.</p>
       <p>Jeśli chcesz, aby część tekstu była nieedytowalna:</p>
-<pre>
+<div class="code"><code><pre>
 &lt;p contenteditable&gt;
   Edytowalne &lt;span contenteditable="false"&gt;ale to już nie&lt;/span&gt;
-&lt;/p&gt;
-</pre>
+&lt;/p&gt;</pre></code></div>
 
 
       <li><b>dir</b></li>
       <p>Określa kierunek tekstu (np. rtl dla języków pisanych od prawej do lewej).</p>
-      <p>&lt;element dir="rtl"&gt;</p>
+      <div class="code"><code><pre>&lt;input type="text" dir="rtl"&gt;</pre></code></div>
       <input type="text" dir="rtl">
 
       <li><b>draggable</b></li>
       <p>Określa, czy element może być przeciągany (true lub false).</p>
-      <p>&lt;div draggable="true"&gt;Przeciągnij mnie&lt;/div&gt;</p>
+      <div class="code"><code><pre>&lt;div draggable="true"&gt;Przeciągnij mnie&lt;/div&gt;</pre></code></div>
       <div draggable="true">Przeciągnij mnie</div>
 
       <li><b>hidden</b></li>
@@ -48,30 +50,31 @@
 
       <li><b>lang</b></li>
       <p>Ustawia język treści wewnątrz elementu.</p>
-      <p>&lt;p lang="en"&gt;Hello&lt;/p&gt;</p>
+      <div class="code"><code><pre>&lt;p lang="en"&gt;Hello&lt;/p&gt;</pre></code></div>
 
       <li><b>spellcheck</b></li>
       <p>Określa, czy treść elementu ma być sprawdzana pod kątem błędów.</p>
-      <p>&lt;textarea spellcheck="true"&gt;</p>
+      <div class="code"><code><pre>&lt;textarea spellcheck="true"&gt;</code></div>
       <textarea spellcheck="true" lang="pl"></textarea>
 
       <li><b>style</b></li>
       <p>Inline CSS - styl bezpośrednio przypisany do elementu.</p>
-      <p>&lt;div style="color:red"&gt;Czerwony tekst&lt;/div&gt;</p>
+      <div class="code"><code><pre>&lt;div style="color:red"&gt;Czerwony tekst&lt;/div&gt;</pre></code></div>
 
       <li><b>tabindex</b></li>
       <p>Określa kolejność elementów w nawigacji klawiszem Tab.</p>
-      <p>&lt;div tabindex="0"&gt;Element w kolejności&lt;/div&gt;</p>
+      <div class="code"><code><pre>&lt;div tabindex="0"&gt;Element w kolejności&lt;/div&gt;</pre></code></div>
 
       <li><b>title</b></li>
       <p>Dodatkowy opis pojawiający się jako podpowiedź po najechaniu myszką.</p>
-      <p>&lt;span title="Wskazówka"&gt;Najedź tu&lt;/span&gt;</p>
+      <div class="code"><code><pre>&lt;span title="Wskazówka"&gt;Najedź tu&lt;/span&gt;</pre></code></div>
       <span title="Wskazówka">Najedź tu</span>
 
       <li><b>translate</b></li>
       <p>Określa, czy zawartość elementu powinna być tłumaczona przez przeglądarkę.</p>
-      <p>&lt;div translate="no"&gt;Nazwa marki&lt;/div&gt;</p>
+      <div class="code"><code><pre>&lt;div translate="no"&gt;Nazwa marki&lt;/div&gt;</pre></code></div>
     </ul>
-  </ol>
+  </ol></div></div>
+  <script src="sideJS.js"></script>
 </body>
 </html>
