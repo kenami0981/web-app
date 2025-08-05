@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+  <div id="sky"></div>
+  <div class="page-wrap">
     <h2>Tabindex</h2>
-    <h2>Tabindex - dostępność i kontrola fokusu</h2>
+    <div class="content">
+    
+    
   <ol>
-    <li>
-      <p><b>Co to jest?</b></p>
+    <li>Co to jest?</li>
       <p>Atrybut <code>tabindex</code> pozwala kontrolować kolejność nawigacji za pomocą klawisza <kbd>Tab</kbd> oraz decydować, które elementy są fokusowalne.</p>
-    </li>
+    
 
-    <li>
-      <p><b>Wartości atrybutu</b></p>
-      <ul>
+      <li>Wartości atrybutu</li>
+      <ul class="ol-example">
         <li>
           <p><code>tabindex="0"</code> - element można fokusować i zostanie uwzględniony w naturalnym porządku tabulacji.</p>
         </li>
@@ -27,42 +29,38 @@
           <p><code>tabindex="1"</code>, <code>2</code>, itd. - pozwala ręcznie ustawić kolejność tabulacji (niezalecane, bo zaburza naturalny przepływ).</p>
         </li>
       </ul>
-    </li>
+    
 
-    <li>
-      <p><b>Przykłady użycia</b></p>
-      <ul>
-        <li>
-          <p>Dodanie elementu do kolejności tabulacji:</p>
-          <pre>&lt;div tabindex="0"&gt;Klikalny div&lt;/div&gt;</pre>
-        </li>
+    <li>Przykłady użycia</li>
+      <ul class="ol-example"> 
+        <li>Dodanie elementu do kolejności tabulacji:</li>
+          <div class="code"><code><pre>&lt;div tabindex="0"&gt;Klikalny div&lt;/div&gt;</pre></code></div>
+        
         <li>
           <p>Usunięcie elementu z tabulacji:</p>
-          <pre>&lt;button tabindex="-1"&gt;Ukryty przycisk&lt;/button&gt;</pre>
+          <div class="code"><code><pre>&lt;button tabindex="-1"&gt;Ukryty przycisk&lt;/button&gt;</pre></code></div>
         </li>
         <li>
           <p>Ustalanie własnej kolejności (odradzane):</p>
-          <pre>
+          <div class="code"><code><pre>
 &lt;div tabindex="2"&gt;Drugi&lt;/div&gt;
-&lt;div tabindex="1"&gt;Pierwszy&lt;/div&gt;
-          </pre>
+&lt;div tabindex="1"&gt;Pierwszy&lt;/div&gt;</pre></code></div>
         </li>
       </ul>
-    </li>
+    
 
     <li>
       <p><b>Wskazówki</b></p>
-      <ul>
+      <ul class="ol-example">
         <li><p>Unikaj używania wartości dodatnich (np. <code>tabindex="1"</code>) - lepiej zaprojektować poprawny układ DOM.</p></li>
         <li><p>Używaj <code>tabindex</code> tylko gdy musisz umożliwić dostęp do niestandardowych komponentów (np. <code>&lt;div&gt;</code> jako przycisk).</p></li>
       </ul>
     </li>
 
-    <li>
-      <p><b>Zastosowanie w praktyce</b></p>
+    <li>Zastosowanie w praktyce</li>
       <p>Atrybut <code>tabindex</code> jest przydatny w projektowaniu dostępnych interfejsów - np. dialogów, własnych przycisków czy nawigacji tylko klawiaturą.</p>
-    </li>
-  </ol>
+    
+  </ol></div></div>
   <script src="sideJS.js"></script>
 </body>
 </html>
