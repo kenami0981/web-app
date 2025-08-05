@@ -6,20 +6,23 @@
     <link rel="stylesheet" href="sideStyle.css">
 </head>
 <body>
+  <div id="sky"></div>
+  <div class="page-wrap">
     <h2>HTML5 Cache</h2>
+    <div class="content">
+    
     <ol>
     <li>Cache w HTML5 (Application Cache)</li>
     <ul>
       <li><b>Podstawowy przykład</b></li>
       <p>W pliku HTML należy dodać atrybut <b>manifest</b> do tagu &lt;html&gt;:</p>
-<pre>
+<div class="code"><code><pre>
 &lt;!DOCTYPE html&gt;
 &lt;html manifest="index.appcache"&gt;
   &lt;body&gt;
     &lt;p&gt;Content&lt;/p&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+&lt;/html&gt;</pre></code></div>
       <p>Następnie tworzysz plik <b>index.appcache</b> w tym samym folderze z treścią:</p>
 <pre>
 CACHE MANIFEST
@@ -38,6 +41,8 @@ index.html
       <p>Strona musi być serwowana z odpowiednim nagłówkiem MIME: <code>text/cache-manifest</code>.</p>
     </ul>
   </ol>
+  </div></div>
+  <script src="sideJS.js"></script>
     
 </body>
 </html>
