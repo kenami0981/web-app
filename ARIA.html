@@ -8,7 +8,11 @@
 </head>
 
 <body>
+    <div id="sky"></div>
+  <div class="page-wrap">
     <h2>ARIA</h2>
+    <div class="content">
+    
     <ol>
         <li>Co to jest ARIA?</li>
         <p>ARIA (Accessible Rich Internet Applications) to zbiór atrybutów HTML, które dodaje się do elementów strony,
@@ -21,7 +25,7 @@
             <li>role="banner"</li>
             <p>➤ Zastosowanie: Główna sekcja nagłówka strony (np. logo + menu górne). Używana tylko raz.<br>
                 ➤ Dlaczego: Pomaga technologiom wspomagającym zidentyfikować nagłówek strony.</p>
-            <pre>
+            <div class="code"><code><pre>
 &lt;div role="banner">
     &lt;h1>My Site&lt;/h1>
     &lt;ul>
@@ -30,11 +34,11 @@
         &lt;li>&lt;a href="/contact">Contact&lt;/a>&lt;/li>
     &lt;/ul>
 &lt;/div>
-</pre>
+</pre></code></div>
             <li>role="navigation"</li>
             <p>➤ Zastosowanie: Otacza główne menu lub boczne panele nawigacyjne.<br>
 ➤ Dlaczego: Czytniki ekranu mogą łatwo przeskoczyć do nawigacji.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div role="navigation">
     &lt;h1>My Site&lt;/h1>
     &lt;ul>
@@ -43,51 +47,48 @@
         &lt;li>&lt;a href="/contact">Contact&lt;/a>&lt;/li>
     &lt;/ul>
 &lt;/div>
-</pre>
+</pre></code></div>
 <li>role="main"</li>
 <p>➤ Zastosowanie: Sekcja z główną zawartością strony (np. artykuł, produkt).<br>
 ➤ Dlaczego: Ułatwia szybkie przejście do głównej treści.
 
 </p>
-<pre>
+<div class="code"><code><pre>
 &lt;!-- header & nav here --&gt;
 &lt;div role="main">
     &lt;p>Lorem ipsum...&lt;/p>
 &lt;/div>
 &lt;!-- footer here --&gt;
-
-</pre>
+</pre></code></div>
 <li>role="complementary"</li>
 <p>➤ Zastosowanie: Sidebar lub inne uzupełniające informacje (np. reklama, polecane artykuły).<br>
 ➤ Dlaczego: Informuje, że treść jest poboczna wobec głównej.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div role="complementary">
     &lt;h2>More Articles&lt;/h2>
     &lt;ul>
         &lt;!-- etc --&gt;
     &lt;/ul>
 &lt;/div>
-</pre>
+</pre></code></div>
 <li>role="contentinfo"</li>
 <p>➤ Zastosowanie: Stopka strony zawierająca dane kontaktowe, prawa autorskie itp.<br>
 ➤ Dlaczego: Określa, że to końcowa część dokumentu.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;p role="contentinfo">
     Author: Albert Einstein&lt;br>
     Published: August 15, 1940
 &lt;/p>
-
-</pre>
+</pre></code></div>
 <li>role="search"</li>
 <p>➤ Zastosowanie: Sekcja zawierająca formularz wyszukiwania.<br>
 ➤ Dlaczego: Pozwala użytkownikom z czytnikami szybko odnaleźć wyszukiwarkę.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div role="search">
     &lt;input role="searchbox" type="text">
     &lt;button role="button">Search&lt;/button>
 &lt;/div>
-
-</pre>
+</pre></code></div>
         </ul>
 <li>Widget roles (elementy interfejsu)</li>
 <ul>
@@ -95,31 +96,31 @@
     <p>➤ Zastosowanie: Element działający jak przycisk, np. &lt;div> klikany.<br>
 ➤ Dlaczego: Zapewnia, że czytnik traktuje element jak przycisk.
 </p>
-<pre>
-    &lt;button role="button">Add&lt;/button>
-</pre>
+<div class="code"><code><pre>
+&lt;button role="button">Add&lt;/button>
+</pre></code></div>
     <li>role="link"</li>
     <p>➤ Zastosowanie: Nienatywne linki np. onclick na &lt;span>.<br>
 ➤ Dlaczego: Umożliwia dostępność niestandardowych linków.</p>
     <li>role="checkbox" / role="radio"</li>
     <p>➤ Zastosowanie: Własne komponenty formularza zamiast &lt;input>.<br>
 ➤ Dlaczego: Informuje o typie wyboru i stanie zaznaczenia.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;p>
     &lt;input type="checkbox" role="checkbox" aria-checked="false">
     &lt;I agree to the terms
 &lt;/p>
-</pre>
+</pre></code></div>
     <li>role="combobox"</li>
     <p>➤ Zastosowanie: Pole tekstowe z listą sugerowanych opcji.<br>
 ➤ Dlaczego: Ułatwia dostępność dla wyszukiwarek z autouzupełnianiem.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;input type="text" role="combobox" aria-expanded="false">
-</pre>
+</pre></code></div>
     <li>role="slider"</li>
     <p>➤ Zastosowanie: Interaktywny suwak wartości np. głośność.<br>
 ➤ Dlaczego: Czytnik rozpoznaje zmianę wartości.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div
     role="slider"
     aria-valuemax="100"
@@ -127,95 +128,95 @@
     aria-valuenow="25">
     &lt;div class="sliderhandle">&lt;/div>
 &lt;/div>
-
-</pre>
+</pre></code></div>
     <li>role="tablist" / tab / tabpanel"</li>
     <p>➤ Zastosowanie: Niestandardowe zakładki (np. z użyciem div).<br>
 ➤ Dlaczego: Pozwala poruszać się między zakładkami za pomocą klawiatury.</p>
-    <pre>
+    <div class="code"><code><pre>
 &lt;ul role="tablist">
     &lt;li role="tab">Introduction&lt;/li>
     &lt;li role="tab">Chapter 1&lt;/li>
     &lt;li role="tab">Chapter 2&lt;/li>
 &lt;/ul>
-
-    </pre>
+</pre></code></div>
     <li>role="tooltip"</li>
     <p>➤ Zastosowanie: Dymek wyświetlany po najechaniu myszką.<br>
 ➤ Dlaczego: Komunikuje pomocnicze informacje.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;span aria-describedby="slopedesc">Slope&lt;/span>
 &lt;div role="tooltip" id="slopedesc">y=mx+b&lt;/div>
-</pre>
+</pre></code></div>
     <li>role="dialog"</li>
     <p>➤ Zastosowanie: Okna modalne, np. popup z formularzem.<br>
 ➤ Dlaczego: Informuje o interaktywnym, skupionym kontekście.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div role="dialog">
     &lt;p>Are you sure?&lt;/p>
     &lt;button role="button">Yes&lt;/button>
     &lt;button role="button">No&lt;/button>
 &lt;/div>
-</pre>
+</pre></code></div>
 </ul>
 <li>Structural roles (struktura)</li>
 <ul>
     <li>role="article"</li>
     <p>➤ Zastosowanie: Używane tylko jeśli nie możesz użyć &lt;article>.<br>
 ➤ Dlaczego: Identyfikuje sekcję jako niezależny wpis (np. blog).</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div role="article">
     &lt;h1>My first article&lt;/h1>
     &lt;p>Lorem ipsum...&lt;/p>
 &lt;/div>
-</pre>
+</pre></code></div>
     <li>role="region"</li>
     <p>➤ Zastosowanie: Ważne obszary (np. pole wyników wyszukiwania).<br>
 ➤ Dlaczego: Czytniki mogą pozwolić przeskoczyć do tej sekcji.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div role="region">
  Home team: 4&lt;br>
  Away team: 2
 &lt;/div>
-</pre>
+</pre></code></div>
     <li>role="presentation"</li>
     <p>➤ Zastosowanie: Gdy element ma tylko funkcję wizualną (np. tabela do layoutu).<br>
 ➤ Dlaczego: Ignoruje semantykę - np. &lt;table> nie będzie traktowane jak tabela.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div style="float:left;">Some content on the left.&lt;/div>
 &lt;div style="float:right;">Some content on the right&lt;/div>
 &lt;div role="presentation" style="clear:both;">&lt;/div> &lt;!-- Only used to clear floats --&gt;
-</pre>
+</pre></code></div>
 </ul>
 <li>Live region roles (powiadomienia)</li>
 <ul>
     <li>role="alert" + aria-live="assertive"</li>
     <p>➤ Zastosowanie: Pilne komunikaty np. „Uwaga! Sesja wygasa”.<br>
 ➤ Dlaczego: Czytniki odczytują treść natychmiast po zmianie.</p>
-<pre>
-&lt;div role="alert" aria-live="assertive">Your session will expire in 60 seconds.&lt;/div>
+<div class="code"><code><pre>
+&lt;div role="alert" aria-live="assertive">Your session will expire in 60 seconds.&lt;/div></pre></code></div>
 <p>Note that I've included both role="alert" and aria-live="assertive" at the same time. These are
 synonymous attributes, but some screen readers only support one or the other. By using both
 simultaneously we therefore maximize the chances that the live region will function as expected.</p>
-</pre>
+
     <li>role="status" + aria-live="polite"</li>
     <p>➤ Zastosowanie: Komunikaty niekrytyczne, np. „Zapisano zmiany”.<br>
 ➤ Dlaczego: Czytnik odczyta treść bez przerywania użytkownikowi.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;div role="status">Online&lt;/div>
-</pre>
+</pre></code></div>
     <li>role="log"</li>
     <p>➤ Zastosowanie: Dziennik zdarzeń lub historia wiadomości.<br>
 ➤ Dlaczego: Nowe wpisy są automatycznie odczytywane użytkownikowi.</p>
-<pre>
+<div class="code"><code><pre>
 &lt;ul role="log">
     &lt;li>User 1 logged in.&lt;/li>
     &lt;li>User 2 logged in.&lt;/li>
     &lt;li>User 1 logged out.&lt;/li>
 &lt;/ul>
-</pre>
+</pre></code></div>
 </ul>
     </ol>
+    </div></div>
+    <script src="sideJS.js"></script>
 </body>
 
 </html>
