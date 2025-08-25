@@ -108,7 +108,12 @@ body {
   display: block;
   
 }
-
+.title-container {
+    display: flex;
+    justify-content: center; /* poziomo */
+    align-items: center;     /* pionowo, jeśli chcesz */
+    width: 100%;
+}
 
     #title1 {
 
@@ -121,6 +126,7 @@ body {
 
     #sky {
       overflow: hidden;
+      
       height: 100vh;
       width: 100vw;
       background-color: rgba(155, 178, 255, 1);
