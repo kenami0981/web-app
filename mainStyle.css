@@ -5,11 +5,18 @@
   font-style: normal;
 }
 body {
-      overflow: hidden;
+      
       font-family:"MontserratBold";
     }
-
+    .content {
+      position: relative;
+  z-index: 3;
+  padding-top: 150px; /* żeby tytuł nie był pod chmurami */
+  padding-left: 2rem;
+  padding-right: 2rem;
+    }
     .cloud-wrapper {
+      
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -109,6 +116,7 @@ body {
   
 }
 .title-container {
+
     display: flex;
     justify-content: center; /* poziomo */
     align-items: center;     /* pionowo, jeśli chcesz */
@@ -116,7 +124,7 @@ body {
 }
 
     #title1 {
-
+z-index: 3;
       color: white;
       font-size: 8rem;
       justify-self: center;
@@ -126,7 +134,7 @@ body {
 
     #sky {
       overflow: hidden;
-      
+      position: fixed; 
       height: 100vh;
       width: 100vw;
       background-color: rgba(155, 178, 255, 1);
