@@ -43,8 +43,8 @@ body {
       position: relative;
       width: 250px;
       height: 150px;
-      z-index: 2;
-      margin-bottom: 150px;
+      z-index: 10;
+      margin-bottom: 300px;
       opacity: 0.8;
     }
 .dropdown:hover .dropdown-inner {
@@ -56,6 +56,7 @@ body {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease;
+  z-index: 20;
 }
     .cloud-img {
       
@@ -95,7 +96,7 @@ body {
       min-width: 180px;
       border-radius: 0.5rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      z-index: 3;
+      z-index: 30;
     }
 
     .dropdown-content a {
@@ -103,15 +104,18 @@ body {
       padding: 10px 14px;
       text-decoration: none;
       color: black;
+      
 
     }
 
     .dropdown-content a:hover {
+      z-index: 30;
       background-color: #ddd;
     }
 
     .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
+  z-index: 30;
   display: block;
   
 }
@@ -140,6 +144,7 @@ z-index: 3;
       background-color: rgba(155, 178, 255, 1);
       background-image: linear-gradient(0deg, rgba(155, 178, 255, 1) 0%, rgba(163, 195, 255, 1) 50%, rgba(255, 253, 127, 1) 75%, rgba(255, 253, 127, 1) 100%);
       background-repeat: no-repeat;
+      z-index: 0;
       
     }
     @keyframes moveUp {
@@ -152,7 +157,7 @@ z-index: 3;
 }
 
 .cloud {
-  z-index: 0;
+  z-index: 1;
   opacity: 0.2;
 pointer-events: none;
     animation: moveUp 50s linear infinite;
